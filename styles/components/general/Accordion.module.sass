@@ -1,0 +1,46 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.accordion
+  border: f.px(1) solid
+  @include m.dye(border, c.$alpha)
+  border-radius: f.px(10)
+  @include m.gap($mt: f.px(25))
+
+.header
+  cursor: pointer
+  @include m.flex($ai:center, $jc: space-between)
+  font-size: f.px(25)
+  font-weight: 500
+  @include m.gap($pt: f.px(20), $pb: f.px(25), $pl: f.px(20))
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(15), $pb: f.px(15), $pl: f.px(20))
+    font-size: f.px(16)
+
+.icon
+  width: f.px(10)
+  @include m.gap($mr: f.px(20))
+  transform: rotate(90deg)
+  transition: all .3s
+  & > *
+    stroke
+    @include m.dye(stroke, c.$alpha)
+
+.isOpen
+  transform: rotate(-90deg)
+
+.content
+  display: grid
+  overflow: hidden
+  grid-template-rows: 0fr
+  transition: grid-template-rows 500ms
+  @include m.gap($mt: 0, $mr: f.px(20), $ml: f.px(20))
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+
+.content > div
+  overflow: hidden
+
+.show
+  grid-template-rows: 1fr

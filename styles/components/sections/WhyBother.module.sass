@@ -1,0 +1,201 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  z-index: 5
+  & > *
+    @include m.media(phone, tablet)
+      @include m.gap($plr: f.px(0))
+  @include m.media(laptop, desktop)
+    @include m.gap($pb: f.px(90), $pt: f.px(90))
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(50))
+
+.content
+  border-radius: f.px(35)
+  background: #6F01C6
+  @include m.media(phone, tablet)
+    border-radius: f.px(20) f.px(35) f.px(35) f.px(20)
+
+.title
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(22), $pl: f.px(15))
+    line-height: 110%
+    font-size: f.px(30)
+  @include m.media(laptop, desktop)
+    @include m.gap($mt: f.px(0),$mb: f.px(30))
+    // transform: translateX(f.px(-114))
+    font-size: f.px(44)
+  // max-width: 18ch
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.points
+  // overflow: hidden
+  position: relative
+  z-index: 2
+  flex-basis: 50%
+  // height: 100%
+  @include m.gap($mb: f.px(0), $mt: f.px(29))
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(0))
+  
+    
+
+.img
+  @include m.gap($mt: f.px(29))
+  @include m.media(phone, tablet)
+    display: none
+  position: relative
+  flex-basis: 50%
+  // @include m.gap($ml: f.px(33))
+
+.sofa
+  position: absolute
+  bottom: -1px
+  z-index: 1
+  width: f.px(700)
+  // left: 10px
+.women
+  position: absolute
+  z-index: 2
+  bottom: 0
+  width: f.px(635)
+  // height: f.px(600)
+.wrapItem
+  position: relative
+  z-index: 2
+  border-radius: f.px(29)
+  background: #F9F0FF
+  height: f.px(160)
+  @include m.gap($mb: f.px(8), $mlr: f.px(33), $pl: f.px(41))
+  @include m.media(phone, tablet)
+    height: auto
+    min-height: f.px(103)
+    max-height: fit-content
+    @include m.gap($mb: f.px(10),$mlr: f.px(15), $pl: f.px(41))
+  &:nth-of-type(2)
+    @include m.gap($mt: f.px(0))
+  &:nth-of-type(4)
+    & > *
+      max-width: f.px(300)
+  &:nth-of-type(5)
+    margin-bottom: f.px(31)
+    
+    // max-width: 200px
+
+.pointTitle
+  white-space: nowrap
+  font-size: f.px(28)
+  font-weight: 500
+  @include m.gap($pt: f.px(37), $pb: f.px(9), $mb: f.px(0))
+  @include m.media(laptop)
+    @include m.gap($pt: f.px(17))
+  @include m.media(phone, tablet)
+    font-size: f.px(20)
+    @include m.gap($pt: f.px(20), $pb: f.px(5))
+
+.decs
+  font-size: f.px(18)
+  color: #1A1A1A
+  font-weight: 300
+  line-height: 120%
+  @include m.gap($mb: f.px(0), $pb: f.px(6))
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+
+.subdesc
+  font-size: f.px(10)
+  font-weight: 200
+  line-height: 120%
+  color: #1A1A1A
+  @include m.media(phone, tablet)
+    max-width: f.px(260)
+    color: #565350
+    @include m.gap($pb: f.px(14), $mb:f.px(0))
+
+.tagOne
+  // background: red
+  & > *
+    @include m.gap($plr: f.px(42), $ptb: f.px(8), $ml: f.px(52), $mr: f.px(12))
+  display: inline
+
+
+.tagTwo
+  display: inline
+  & > *
+    @include m.gap($plr: f.px(16), $ptb: f.px(8))
+
+.mobileTags
+  @include m.gap($pl: f.px(17), $mtb: f.px(26))
+  @include m.media(laptop, desktop)
+    display: none
+
+.tagOneMobile
+  display: inline
+  & > *
+    @include m.gap($plr: f.px(25), $ptb: f.px(10), $mr: f.px(13))
+
+
+
+.tagTwoMobile
+  display: inline
+  & > *
+    @include m.gap($plr: f.px(16), $ptb: f.px(10))
+
+.portal
+  position: absolute
+  bottom: f.px(350)
+  left: f.px(450)
+  width: 100%
+  // @include m.gap($pb: f.px(12))
+
+.portals
+  position: relative
+  width: 100%
+.smallOne
+  position: absolute
+  bottom: f.px(-70)
+  right: f.px(100)
+  @include m.media(phone, tablet)
+    display: none
+.smallTwo
+  position: absolute
+  bottom: f.px(-290)
+  right: f.px(460)
+  @include m.media(phone, tablet)
+    display: none
+
+.medium
+  position: absolute
+  bottom: f.px(-60)
+  right: f.px(490)
+  @include m.media(phone, tablet)
+    display: none
+.big
+  position: absolute
+  bottom: f.px(-300)
+  right: f.px(40)
+  transform: rotate(25deg)
+  @include m.media(phone, tablet)
+    display: none
+
+.verticalArrow
+  position: absolute
+  top: f.px(0)
+  z-index: 1
+  right: f.px(0)
+  // display: flex
+  // align-self: stretch
+  // justify-content: stretch
+  // height: fit-content
+  object-fit: cover
+  @include m.media(tablet)
+    right: f.px(-8)
+  @include m.media(laptop, desktop)
+    display: none
+  @include m.media(phone)
+    // scale: 1.014
+  height: 100%

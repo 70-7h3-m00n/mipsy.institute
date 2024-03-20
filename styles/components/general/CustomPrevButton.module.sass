@@ -1,0 +1,93 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.containerNext
+  position: absolute
+  height: 100px
+  top: 0px
+  right: 0
+  z-index: 3
+  @include m.media(phone, tablet)
+    z-index: 0
+    top: -100px
+  & > *
+    & > *
+      & > *
+        & > *
+          transition: stroke 0.5s ease
+  &:hover
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #F87E1B
+              stroke: white
+
+  &.reviewNextBtn
+    transition: stroke 2s ease
+    top: 10px
+    right: 20px
+    @include m.media(phone, tablet)
+      top: 90%
+      right: 5%
+    & > *
+      & > *
+        & > *
+          & > *
+            transition: stroke 0.5s ease
+            stroke: #6F01C6
+            @include m.media(phone, tablet)
+                display: none
+    &:hover
+      
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #6F01C6
+              stroke: white
+
+.containerPrev
+  position: absolute
+  top: 0px
+  right: 50px
+  z-index: 3
+  @include m.media(phone, tablet)
+    z-index: 0
+    top: -100px
+  & > *
+    & > *
+      & > *
+        & > *
+          transition: stroke 0.5s ease
+  &:hover
+    & > *
+      & > *
+        & > *
+          & > *
+            fill: #F87E1B
+            stroke: white
+
+  &.reviewPrevBtn
+    top: 10px
+    right: 70px 
+    @include m.media(phone, tablet)
+      top: 90%
+      left: 10%
+    & > *
+      & > *
+        & > *
+          & > *
+            transition: stroke 0.5s ease
+            stroke: #6F01C6
+            @include m.media(phone, tablet)
+              display: none
+    &:hover
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #6F01C6
+              stroke: white
+

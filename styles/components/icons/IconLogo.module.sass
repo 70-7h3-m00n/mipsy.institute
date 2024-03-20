@@ -1,0 +1,44 @@
+@use "sass:math"
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+$size: 1
+$defaultWidth: 33
+$defaultHeight: 40
+$defaultSpaceRight: 28
+
+$width: $size * $defaultWidth
+$height: math.div($width, math.div($defaultWidth, $defaultHeight))
+$spaceRight: math.div($width, math.div($defaultWidth, $defaultSpaceRight))
+
+.standalone,
+.withTitle
+  position: relative
+  // height: f.px($height)
+  & path
+    @include m.dye(fill, c.$nu)
+
+.standalone
+  width: f.px($width, em)
+  @include m.gap($m: f.px(10, em))
+
+.withTitle
+  @include m.flex
+  width: f.px($width + $spaceRight, em)
+  @include m.gap($pr: f.px($spaceRight, em))
+  &::after
+    content: ''
+    position: absolute
+    right: f.px(math.div($spaceRight, 2) - 1, em)
+    top: 50%
+    width: f.px(1)
+    height: 130%
+    transform: translateY(-50%)
+    @include m.dye(bg, c.$gamma)
+
+
+.atFooter
+  // @include m.gap($m: f.px(0))
+  &::after
+    @include m.dye(bg, white)

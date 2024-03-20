@@ -1,0 +1,25 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.icon
+  @include m.sizeIcon($w: 64, $h: 64)
+  min-width: f.px(50)
+  @include m.media(phone, tablet)
+    @include m.sizeIcon($w: 40, $h: 40)
+
+.contentBox
+  @include m.gap($mtb: f.px(50))
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(25))
+
+
+.innerBox
+  display: flex
+  align-items: center
+  @include m.gap($mb: f.px(17))
+
+  p
+    @include m.gap($mb: f.px(0), $ml: f.px(30))
+    @include m.media(phone, tablet)
+      @include m.gap($ml: f.px(10))

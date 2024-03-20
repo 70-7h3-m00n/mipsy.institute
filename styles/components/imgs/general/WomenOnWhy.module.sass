@@ -1,0 +1,21 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  overflow: hidden
+  // width: 700px
+  // height: 700px
+  @include m.media(phone, tablet)
+  transform: translateY(4px)
+  // @include m.media(laptop)
+  //   transform: translateX(12%)
+
+
+.img
+  @include m.media(laptop)
+    // transform: translateX(11%)
+  // @media screen and (min-width: bp.$tablet) and (max-width: 1050px)
+  //   transform: translateX(-15%)
+  // @media screen and (min-width: bp.$tablet) and (max-width: 850px)
+  //   transform: translateX(12%)

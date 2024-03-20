@@ -1,0 +1,38 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 41, $h: 39)
+  @include m.flex
+  cursor: pointer
+  
+  
+  &.fourtyPx
+    svg
+      fill: #6F01C6
+      // transition: stroke 0.4s ease, fill 3s ease
+      circle, line
+        stroke: white
+        transition: stroke 0.4s ease, fill 0.2s ease
+    @include m.sizeIcon($w: 45, $h: 45)
+    @include m.media(phone, tablet)
+      @include m.sizeIcon($w: 30, $h: 30)
+    &:hover
+      svg
+        fill: white
+        circle, line
+          stroke: #6F01C6
+          // transition: stroke 2s ease
+
+
+  &.fourtyPxViolet
+    svg
+      fill: white
+      circle, line
+        stroke: #6F01C6
+    &:hover
+      svg
+        fill: #6F01C6
+        circle, line
+          stroke: white

@@ -1,0 +1,16 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 20, $h: 20)
+  @include m.flex
+  & svg
+    fill: white
+
+.red
+  stroke: #FD521B
+  stroke-width: f.px(0.7)
+  @include m.sizeIcon($w: 45, $h: 20)
+  & svg
+    fill: none

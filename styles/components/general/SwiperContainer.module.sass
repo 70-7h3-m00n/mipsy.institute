@@ -1,0 +1,60 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+
+  &.topCourses
+    max-height: f.px(800)
+    & > *
+      // transform: translate3d(0px, 0px, 0px) !important
+      // box-sizing: border-box
+    // overflow: visible
+
+  &.diplomas
+    max-height: f.px(400)
+    margin-bottom: f.px(60)
+    overflow: visible
+    & > *:nth-child(1)
+      bottom: f.px(-40)
+    & > *
+      & > *
+        // min-width: f.px(400)
+        // max-width: f.px(400)
+        cursor: pointer
+        // transform: translate3d(0px, 0px, 0px) !important
+  &.reviews
+    .swiper-slide
+      width: 300px
+  @include m.media(phone, tablet)
+    &.teachers > *
+      & > *
+        flex-basis: 35%
+        max-width: f.px(168) !important
+        margin-bottom: f.px(30)
+  @include m.media(laptop)
+    &.teachers > *
+      & > *
+        &:nth-child(odd)
+          margin-right: f.px(50) !important
+  @include m.media(desktop)
+    &.teachers > *
+      & > *
+        max-width: f.px(530) !important
+  @include m.media(laptop, desktop)
+    &.teachers > *
+      flex-wrap: wrap
+      max-width: 100% !important
+      transform: translate3d(0px, 0px, 0px) !important
+      & > *
+        flex-basis: 45%
+        margin-top: f.px(10) !important
+        margin-bottom: f.px(30)
+
+// .custom-prev-button-container, .custom-next-button-container
+//   display: block
+//   width: 100px
+//   position: absolute
+//   top: 0
+//   left: 0
+//   background: red

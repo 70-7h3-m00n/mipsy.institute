@@ -1,0 +1,170 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(30), $pb: f.px(50))
+  @include m.media(laptop, desktop)
+    @include m.gap($pb: f.px(0), $pt: f.px(90))
+
+.title
+  display: inline-block
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(15))
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(30))
+    font-size: f.px(44)
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.tag
+  height: 100%
+  display: inline-block
+  position: relative
+  @include m.gap( $mb: f.px(20))
+  align-self: center
+  & > *
+    position: absolute
+    @include m.media(laptop, desktop)
+      top: f.px(-10)
+      left: f.px(25)
+      @include m.gap($plr: f.px(26), $ptb: f.px(8), $mb:f.px(10))
+    @include m.media(phone, tablet)
+      @include m.gap($plr: f.px(18), $ptb: f.px(5), $mb:f.px(10))
+      top: f.px(-35)
+      left: f.px(-299)
+
+.subtitleContainer
+  position: relative
+  z-index: 2
+  background-color: c.$nu
+  @include m.media(desktop)
+    @include m.flex($display: false, $fb: 50%)
+
+.btn
+  width: 100%
+
+.subtitle, .mainSubtitle
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+    @include m.gap($mb: f.px(10))
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(54))
+    font-size: f.px(20)
+  @include m.media(laptop)
+    @include m.gap($mb: f.px(39))
+  color: #131313
+  font-weight: 300
+  line-height: 130%
+  @include m.dye(c, c.$theta)
+
+.mainSubtitle
+  display: inline
+  @include m.gap($mb: f.px(4))
+
+.moreText
+  cursor: pointer
+  position: relative
+  z-index: 2
+  @include m.gap($mb: f.px(31), $mt:f.px(4))
+  @include m.media(laptop)
+    @include m.gap($mb: f.px(18))
+
+  font-size: f.px(20)
+  font-weight: 700
+  color: #F87E1B
+  text-decoration-line: underline
+  text-underline-offset: f.px(5)
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+    @include m.gap($mb: f.px(15))
+
+.content
+  @include m.media(laptop, desktop)
+    @include m.flex
+    justify-content: space-between
+
+.left
+  @include m.media(laptop, desktop)
+  flex-basis: 49%
+  // @include m.gap($mr: f.px(30))
+
+.swiper
+  position: relative
+  z-index: 1
+  overflow: hidden
+  @include m.media(laptop, desktop)
+    max-width: 50%
+
+.diploma
+  & > *
+    display: flex
+    height: f.px(192)
+    // max-width: max-content
+    border: f.px(1) solid
+    @include m.dye(border, rgba(c.$kappa, .2))
+    border-radius: f.px(15)
+    & > *
+      border-radius: f.px(15)
+
+.supplement
+  
+  & > *
+    // max-width: f.px(291)
+    height: f.px(390)
+    width: f.px(270)
+    @include m.media(phone, tablet)
+      height: f.px(385)
+      width: f.px(270)
+
+.slidesContainer 
+  @include m.gap($mt: f.px(10), $mr: f.px(15))
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  row-gap: f.px(15)
+  column-gap: f.px(16)
+  @include m.media(phone, tablet)
+    row-gap: f.px(10)
+    column-gap: f.px(10)
+  @include m.media(phone)
+    row-gap: f.px(30)
+    column-gap: f.px(10)
+    overflow-x: auto
+    overflow-y: hidden
+    @include m.gap($mr: f.px(0))
+  @include m.media(laptop)
+    row-gap: f.px(26)
+    column-gap: f.px(10)
+  justify-items: stretch
+  flex-shrink: 0
+
+.trigger
+  width: 260px
+  @include m.media(phone, tablet)
+    width: 305px
+  border-radius: 15px
+  // height: 200px
+  &:first-child
+    grid-area: A
+    grid-row: span 1
+    grid-column: 1 / span 2
+  &:nth-child(2)
+    grid-area: B
+    grid-column: 1 / span 2
+    grid-row: 1 /span 1
+    z-index: 2
+  &:nth-child(3)
+    margin-top: f.px(5)
+    height: fit-content
+    grid-area: C
+    grid-row: 1 / span 2
+    scale: 1.028
+    @include m.media(phone)
+      margin-top: f.px(16)
+      scale: 1.076
+      
+    @include m.media(laptop)
+      margin-top: f.px(10)
+      scale: 1.062

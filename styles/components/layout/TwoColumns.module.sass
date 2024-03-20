@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+
+.container
+  width: 100%
+  @include m.media(laptop, desktop)
+    @include m.flex($jc: space-between)
+  @include m.media(phone, tablet)
+    @include m.flex($fd: column)
+
+  &.slidable
+    @include m.gap($mtb: f.px(-40), $ptb: f.px(40))
+    overflow-x: auto
+    @include m.media(phone, tablet)
+      @include m.flex($fd: row)

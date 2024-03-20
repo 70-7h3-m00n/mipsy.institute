@@ -1,0 +1,41 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  // margin-left: 30px
+  @include m.gap($ml: f.px(30), $mtb: f.px(30))
+  font-size: 14px
+
+.wrapper
+  display: flex
+  align-items: center
+  @include m.gap($mb: f.px(10))
+
+.title
+  @include m.gap($pl: f.px(20))
+  margin: 0
+  font-weight: 500
+
+.description
+  margin-left: 45px
+
+.contacts
+  // font-size: 14px
+  // @include m.gap($pl: f.px(20))
+  // color: black
+  // margin: 0
+  // font-weight: 500
+  // font-weight: 500
+  // text-decoration-line: underline
+  display: inline-block
+  font-size: 16px
+  font-weight: 350
+  color: #FD521B
+  @include m.gap($ptb: f.px(13), $plr: f.px(110), $mlr: f.px(10), $mt: f.px(20))
+  border-radius: f.px(5)
+  border: 2px solid #FD521B
+  transition: background 0.5s ease, color 0.5s ease
+  &:hover
+    background: #FD521B
+    color: white

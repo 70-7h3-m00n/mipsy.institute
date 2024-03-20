@@ -1,0 +1,78 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.box 
+  position: relative
+.container
+  
+  margin-bottom: 30px
+  @include m.media(laptop, desktop)
+    display: none
+  @include m.media(tablet, phone)
+  input
+    // position: relative
+    // display: block
+    width: 100%
+    padding: 10px
+    background: #F9F0FF
+
+.icon
+  @include m.media(tablet, phone)
+    position: absolute
+    top: 50%
+    right: f.px(13)
+    transform: translateY(-50%)
+    @include m.flex($jc: center, $ai: center)
+    // size: 10px
+    min-width: f.px(34)
+    max-width: f.px(34)
+    min-height: f.px(30)
+    max-height: f.px(30)
+    border-radius: f.px(2)
+    @include m.dye(bg, #ED5623)
+    & > *
+      height: 18px
+
+.modal
+  position: absolute
+  background: #F9F0FF
+  
+  z-index: 2
+  $box-shadow: 2.3px 16.2px 2.2px rgba(0, 0, 0, 0.067), 2.1px 15px 5.3px rgba(0, 0, 0, 0.082), 1.9px 13.2px 10px rgba(0, 0, 0, 0.086), 2px 13.7px 17.9px rgba(0, 0, 0, 0.084), 2.9px 20.3px 33.4px rgba(0, 0, 0, 0.079), 10px 70px 80px rgba(0, 0, 0, 0.07)
+  box-shadow: $box-shadow
+
+  top: calc(100% + 20px)
+  @include m.media(laptop, desktop)
+    display: none
+  @include m.media(tablet)
+    height: f.px(370)
+    left: 0
+    right: 0
+  
+  @include m.media(phone)
+    height: f.px(430)
+    left: 0
+    right: 0
+
+.card
+  font-size: 12px
+  font-weight: 350
+  @include m.gap($ml: f.px(16))
+
+.searchResults
+  font-weight: 500
+  font-size: 16px
+  @include m.gap($ml: f.px(16))
+  @include m.gap($mt: f.px(20))
+  @include m.gap($mb: f.px(10))
+
+.sorryText
+  font-weight: 500
+  @include m.gap($mlr: f.px(16))
+  @include m.gap($mt: f.px(20))
+  font-size: 12px
+
+.allPrograms
+  display: flex
+  justify-content: center

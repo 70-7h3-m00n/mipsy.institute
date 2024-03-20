@@ -1,0 +1,99 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.wrapper
+  position: relative
+  padding-top: 20px
+  padding-left: 35px
+
+.popUpForm
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  position: fixed
+  // height: 100px
+  // width: 100px
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 12
+  background-color: rgba(0, 0, 0, 0.5)
+  // background: black
+  // opacity: 0.5
+
+.popUpContainer
+  background: white
+.formWrapper
+  // height: 100%
+  // position: fixed
+  
+  width: fit-content
+  height: fit-content
+  background: white
+  // opacity: 1.5
+
+.title
+  font-size: 14px
+  font-weight: 500
+  &:nth-of-type(3)
+    margin-top: 22px
+
+.icon
+  display: inline
+
+.iconWrapper
+  display: flex
+  align-items: center
+  margin-bottom: f.px(12)
+  &:nth-of-type(2)
+    margin-bottom: f.px(15)
+  &:nth-last-child(2)
+    margin-bottom: f.px(15)
+    
+
+
+.phoneNumber
+  color: black
+  position: relative
+  margin-left: f.px(7)
+  &:hover
+    font-weight: 500
+
+.whatsUpNumber
+  color: black
+  text-decoration: underline
+  text-decoration-skip-ink: auto
+  text-underline-offset: 4px
+  font-size: 14px
+  font-weight: 350
+  &:hover
+    font-weight: 500
+    color: #F87E1B
+
+.callBack
+  & > *
+    text-align: left
+    & > *
+      padding-left: 0
+      margin-top: 0
+      padding-top: 4px
+      font-size: 14px
+      font-weight: 500
+      text-decoration: underline
+      // text-underline-offset: 4px
+      line-height: 120%
+      background-color: white
+      color: black
+      text-transform: lowercase
+      &::first-letter
+        text-transform: uppercase
+      &::before
+        content: 'Заказать '
+      &::after
+        content: ''
+        box-shadow: none
+      &:hover
+        border: none
+        transform: scale(1)

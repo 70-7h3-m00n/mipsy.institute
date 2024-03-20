@@ -1,0 +1,44 @@
+@use '@/styles/utils/funcs' as f
+@use '@/styles/utils/mixin' as m
+
+.programs
+  transform: translate(-8%, -5%)
+  border-radius: f.px(15)
+  position: absolute
+  background: white
+  width: f.px(330)
+  height: f.px(370)
+  // display: flex
+  // flex-direction: column
+  // justify-content: center
+  // align-items: center
+  @include m.gap($p: f.px(10))
+  p
+    @include m.gap($pt: f.px(10))
+    color: black
+    font-size: f.px(16)
+    text-align: center
+
+.searchInput
+  // position: relative
+  width: f.px(269)
+  height: f.px(56)
+  @include m.gap($pl: f.px(18), $mb: f.px(38))
+  font-size: f.px(16)
+  color: white
+  background: #2E2D2C
+  border: f.px(0.5) solid white
+  border-radius: f.px(5)
+
+.inputLoupe
+  position: relative
+  width: 90%
+
+.icon
+  @include m.gap($p: f.px(8))
+  position: absolute
+  background: #F87E1B
+  top: 0
+  right: 0
+  transform: translateY(26%)
+  border-radius: f.px(5)

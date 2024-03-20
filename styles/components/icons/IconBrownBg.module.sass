@@ -1,0 +1,17 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 1067, $h: 149)
+  @include m.flex
+  z-index: 1
+  transform: rotate(6deg)
+  right: f.px(-260)
+  // top: 50%
+  position: absolute
+  @include m.media(phone, tablet)
+    @include m.sizeIcon($w: 255, $h: 90)
+    right: f.px(-54)
+    // z-index: 4
+    // top: f.px(-16)

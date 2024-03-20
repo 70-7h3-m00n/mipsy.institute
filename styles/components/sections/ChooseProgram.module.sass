@@ -1,0 +1,78 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  @include m.media(laptop, desktop)
+    height: 725px
+    display: flex
+    justify-content: space-between
+    // padding-left: 20px
+  @include m.media(phone, tablet)
+    height: 100%
+    display: flex
+  background: #FEF2E8
+
+.fon
+  background: #FEF2E8
+
+.icon
+  @include m.media(phone, tablet)
+    display: none
+
+
+.title
+  @include m.media(phone, tablet)
+    @include m.gap($plr: f.px(26))
+  font-family: Stem, sans-serif
+  font-weight: 500
+  font-size: 21px
+  color: #F87E1B
+
+.top
+  @include m.media(laptop, desktop)
+    margin-top: 8em
+    margin-bottom: 4em
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(56))
+    @include m.gap($mb: f.px(16))
+    @include m.gap($ml: f.px(26))
+  padding: 0.5em
+
+  p
+    font-family: Stem, sans-serif
+    font-weight: 500
+    font-size: f.px(22)
+
+.pinkRound
+  background: #B250FF
+  padding: 20px
+  border-radius: 48px
+  font-family: Stem, sans-serif
+  font-weight: 500
+  font-size: 22px
+  color: white
+  @include m.media(laptop, desktop)
+    @include m.gap($mr: f.px(16))
+  @include m.media(phone, tablet)
+    display: block
+    width: fit-content
+    @include m.gap($mb: f.px(16))
+
+
+.violetText
+  color: #B250FF
+
+.spnn
+  @include m.gap($ptbr: f.px(30))
+  font-family: Stem, sans-serif
+  font-weight: 500
+  font-size: 22px
+
+.horizontalOrnament
+  @include m.gap($m: f.px(30))
+  @include m.media(laptop, desktop)
+    display: none
+
+

@@ -1,0 +1,97 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  @include m.media(phone)
+    max-width: f.px(380)
+  @include m.media(tablet)
+    max-width: f.px(360)
+  @include m.media(laptop)
+    max-width: f.px(610)
+  @include m.media(desktop)
+    max-width: f.px(610)
+  @include m.gap($mlr: auto)
+  // font-size: 3vw
+
+.top, .right, .bottom, .left
+  @include m.flex($fd: column)
+  @include m.dye(c, c.$nu)
+
+
+.center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-width: 30%
+  // @include m.gap($p: f.px(19))
+  @include m.gap($p: f.px(19))
+  border-radius: 50%
+  @include m.dye(bg, c.$nu)
+
+.top
+  position: absolute
+  top: 10%
+  @include m.media(phone)
+    left: 54%
+    max-width: 11ch
+  @include m.media(tablet)
+    left: 56%
+    max-width: 11ch
+  @include m.media(laptop, desktop)
+    left: 56%
+    max-width: 22ch
+  transform: translateX(-50%)
+
+.right
+  position: absolute
+  top: 50%
+  @include m.media(phone)
+    right: 4%
+    max-width: 8ch
+  @include m.media(tablet)
+    right: 0
+    max-width: 8ch
+  @include m.media(laptop, desktop)
+    right: 2%
+    max-width: 16ch
+  transform: translateY(-50%)
+
+.bottom
+  @include m.media(phone, tablet)
+    max-width: 10ch
+  @include m.media(laptop, desktop)
+    max-width: 18ch
+  position: absolute
+  bottom: 11%
+  left: 56%
+  transform: translateX(-50%)
+
+.left
+  @include m.media(phone, tablet)
+    max-width: 9ch
+  @include m.media(laptop, desktop)
+    max-width: 15ch
+  position: absolute
+  top: 50%
+  left: 5%
+  transform: translateY(-50%)
+
+
+.subTitle
+  @include m.gap($mb: f.px(3))
+  @include m.media(phone, tablet)
+    font-size: f.px(21)
+  @include m.media(laptop, desktop)
+    font-size: f.px(32)
+  font-weight: 500
+
+.p
+  @include m.gap($mb: 0)
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+  @include m.media(laptop, desktop)
+    font-size: f.px(18)
+

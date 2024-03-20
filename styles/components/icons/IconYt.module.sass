@@ -1,0 +1,17 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 24, $h: 24)
+  @include m.flex
+  & svg
+    fill: white
+  // @include m.gap($m: f.px(10, em))
+.red
+  @include m.sizeIcon($w: 29, $h: 24)
+  stroke: #FD521B
+  & svg
+    fill: none
+  & path
+    // fill: red

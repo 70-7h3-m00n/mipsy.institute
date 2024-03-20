@@ -1,0 +1,19 @@
+# *
+User-agent: *
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.gif
+Disallow: /promo*
+Disallow: *?
+Disallow: *test
+Disallow: /kz
+Disallow: /ru
+Disallow: /uz
+
+# Host
+Host: https://mip.institute
+
+# Sitemaps
+Sitemap: https://mip.institute/sitemap.xml

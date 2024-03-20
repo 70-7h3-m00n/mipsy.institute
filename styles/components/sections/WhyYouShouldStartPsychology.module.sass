@@ -1,0 +1,191 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  z-index: -1
+  opacity: 1
+  transform: translateY(0%)
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
+  background: #fbf4ff
+  @include m.media(laptop, desktop) 
+    @include m.gap($pb: f.px(60))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(30))
+  @include m.media(phone, tablet)
+    display: flex
+    flex-direction: column
+
+    .innerContainer
+      flex: 1
+      display: flex
+      flex-direction: column
+
+      .leftContainer, .rightContainer, .centerContainer
+        display: none
+      .showContainer
+        display: block
+  h2
+    @include m.media(laptop, desktop)
+      @include m.gap($pt: f.px(45), $mb: f.px(37))
+      font-size: f.px(44)
+      font-weight: 500
+      // font-family: Stem
+    @include m.media(phone, tablet)
+      font-size: f.px(26)
+      @include m.gap($pt: f.px(28), $mb: f.px(26))
+
+.hideSection
+  // z-index: 10000
+  opacity: 0
+  transform: translateY(150%)
+  width: 100%
+  position: absolute
+  transition: transform 0.3s ease-in-out, opacity 1.3s ease-in-out
+
+
+.innerContainer
+  display: flex
+  flex-wrap: nowrap
+  & p
+    font-family: Stem
+    font-size: f.px(30)
+    @include m.media(laptop)
+      font-size: f.px(26)
+    font-weight: 350
+    line-height: 130%
+    margin: 0
+    @include m.gap($pl: f.px(22))
+    @include m.media(phone, tablet)
+      font-size: f.px(28)
+
+.leftContainer
+  flex: 0.76
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border: f.px(2) solid #7104C4
+  border-radius: f.px(20)
+  overflow: hidden
+
+  & .firstRow
+    @include m.gap($pt: f.px(30))
+
+  & .secRow
+    display: flex
+    justify-content: flex-end
+    &::after
+      content: '2023 года' /* Создаем пустой элемент */
+      color: white
+      font-weight: 350
+      width: auto /* Автоматическая ширина */
+      padding: 0 f.px(13) /* Отступы для создания фона */
+      @include m.gap($mr: f.px(42))
+      border-radius: f.px(40) /* Скругление углов */
+      background-color: #7104C4
+
+  & .fourthRow
+    &::after
+      content: 'рост обращений' /* Создаем пустой элемент */
+      color: white
+      font-weight: 350
+      width: auto /* Автоматическая ширина */
+      padding: 0 f.px(11) /* Отступы для создания фона */
+      border-radius: f.px(40) /* Скругление углов */
+      background-color: #7104C4
+
+  & .fifthRow
+    @include m.gap($mb: f.px(30))
+    &::after
+      content: 'к психологам на 15%' /* Создаем пустой элемент */
+      color: white
+      font-weight: 350
+      width: auto /* Автоматическая ширина */
+      padding: 0 f.px(11) /* Отступы для создания фона */
+      border-radius: f.px(40) /* Скругление углов */
+      background-color: #7104C4
+
+.centerContainer
+  display: flex
+  flex-direction: column
+  flex: 1
+  @include m.media(laptop, desktop)
+    @include m.gap($mlr: f.px(30))
+
+.vacancies
+  display: flex
+  background: #7104C4
+  color: white
+  height: 100%
+  @include m.gap($mt: f.px(30), $pl: f.px(34))
+  align-items: center
+  justify-content: space-between
+  border-radius: f.px(20)
+  overflow: hidden
+  height: f.px(225)
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(10))
+  & .headHunter
+    align-self: flex-start
+    transform: translate(f.px(7), f.px(-12))
+  & p
+    padding: 0
+    max-width: f.px(250)
+    line-height: 120%
+    // margin-bottom: f.px(10)
+.rightContainer
+  flex: 0.57
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  border: f.px(2) solid #7104C4
+  border-radius: f.px(20)
+  overflow: hidden
+  
+  .text
+    // margin: 0 auto
+    text-align: center
+    & > *
+      padding: 0
+    & :first-child
+      margin: 0 auto
+      @include m.gap($mt: f.px(35), $mb: f.px(12))
+      max-width: f.px(200)
+    & p:nth-child(2)
+      &::after
+        content: 'ТОП-20' /* Создаем пустой элемент */
+        color: white
+        font-weight: 350
+        width: auto /* Автоматическая ширина */
+        padding: 0 f.px(11) /* Отступы для создания фона */
+        // @include m.gap($mr: f.px(42))
+        border-radius: f.px(40) /* Скругление углов */
+        background-color: #7104C4
+    & :nth-child(3)
+      @include m.gap($mt: f.px(12))
+      @include m.media(phone, tablet)
+        max-width: f.px(200)
+        margin: 0 auto
+        @include m.gap($mb: f.px(82))
+      
+.btns
+  display: flex
+  width: f.px(100)
+  margin: 0 auto
+  @include m.gap($mb: f.px(17))
+  justify-content: space-between
+  @include m.media(laptop, desktop)
+    display: none
+
+.switchSection
+  @include m.media(laptop, desktop)
+    font-size: f.px(20)
+  cursor: pointer
+  &:hover
+    color: #7104C4
+  @include m.gap($ptb: f.px(12))
+  text-decoration: underline
+  text-underline-offset: f.px(4)
+  font-weight: 500
+  p
+    margin: 0

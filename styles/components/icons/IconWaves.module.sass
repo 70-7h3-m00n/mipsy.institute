@@ -1,0 +1,14 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.media(desktop)
+    @include m.sizeIcon($w: 337, $h: 17)
+  @include m.media(laptop)
+    @include m.sizeIcon($w: 420, $h: 17)
+  @include m.flex
+  @include m.media( tablet)
+    @include m.sizeIcon($w: 200, $h: 17)
+  @include m.media( phone)
+    @include m.sizeIcon($w: 290, $h: 17)

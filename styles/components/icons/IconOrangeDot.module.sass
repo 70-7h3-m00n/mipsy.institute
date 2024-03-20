@@ -1,0 +1,10 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 29, $h: 29)
+  @include m.flex
+  & svg
+    display: inline
+    height: 20px

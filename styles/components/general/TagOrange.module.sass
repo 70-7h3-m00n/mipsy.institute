@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  display: inline-block
+  background: #F87E1B
+  font-size: f.px(16)
+  font-weight: 350
+  color: #131313
+  // @include m.gap($plr: f.px(17), $ptb: f.px(8))
+  border-radius: f.px(50)
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+

@@ -1,0 +1,31 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+
+.seminarsContainer
+  display: grid
+  height: 100%
+  grid-template-columns: repeat(3, 1fr)
+  gap: f.px(20)
+  // grid-template-rows: repeat(auto-fill, 460px)
+  align-items: stretch
+  justify-self: stretch
+  @include m.gap( $mb: f.px(90))
+  
+  & > *
+    margin-bottom: 10px
+    &:nth-of-type(1)
+      grid-column: span 3
+  @include m.media(phone, tablet)
+    @include m.gap( $mb: f.px(60))
+    display: flex
+    flex-direction: column
+
+.slugTitle
+  font-size: f.px(34)
+  @include m.gap( $mb: f.px(0), $mt: f.px(15))
+  font-weight: 500
+  @include m.media(phone, tablet)
+    font-size: f.px(33)
+      

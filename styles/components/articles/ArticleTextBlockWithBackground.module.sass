@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.content
+  @include m.gap($mtb: f.px(30), $ptb: f.px(46))
+  border-radius: f.px(10)
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(30))
+
+
+.paragraph
+  margin: 0 auto
+  text-align: center
+  max-width: 90%

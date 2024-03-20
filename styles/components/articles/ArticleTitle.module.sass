@@ -1,0 +1,118 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.imgBox
+  display: flex
+
+.imgTitleContainer
+  flex: 0.67
+  @include m.media(phone, tablet)
+    flex: 1
+
+.articleTitle
+  font-size: f.px(65)
+  line-height: 110%
+  font-weight: 500
+  @include m.gap($mt: f.px(17), $mb: f.px(30))
+  @include m.media(tablet)
+    font-size: f.px(33)
+  @include m.media(phone)
+    font-size: f.px(30)
+    
+.authors
+  font-size: f.px(18)
+  display: flex
+  width: fit-content
+  justify-content: space-between
+  @include m.media(phone, tablet)
+    width: f.px(300)
+    flex-direction: column
+    font-size: f.px(14)
+  p
+    @include m.gap($mb: f.px(10))
+
+.tag
+  display: inline-block
+  @include m.dye(c, c.$alpha)
+  border: f.px(1) solid
+  @include m.dye(border, c.$alpha)
+  @include m.gap($mtb: f.px(30), $plr: f.px(17), $ptb: f.px(9))
+  border-radius: f.px(24)
+  font-size: f.px(18)
+  font-weight: 500
+  text-transform: uppercase
+  letter-spacing: f.px(2)
+  @include m.media(phone, tablet)
+    font-size: f.px(10)
+    @include m.gap($mtb: f.px(35), $plr: f.px(10), $ptb: f.px(5))
+
+.imgTitle
+  border-radius: f.px(10)
+  object-fit: fill
+
+.imgTeacherWithAchievements
+  flex: 0.33
+  border: f.px(1) solid
+  @include m.dye(border, c.$alpha)
+  border-radius: f.px(10)
+  @include m.gap($mb: f.px(4), $ml: f.px(10))
+  display: flex
+  justify-content: center
+  position: relative
+  @include m.media(phone, tablet)
+    display: none
+
+.imgTeacherContainer
+  @include m.gap($mt: f.px(30))
+
+.achievements, .teacherName
+  text-align: center
+  margin: 0 auto
+  @include m.gap($mb: f.px(10))
+
+.achievements
+  font-size: f.px(20)
+  @include m.media(laptop,tablet)
+    font-size: f.px(17)
+
+.teacherName
+  font-weight: 500
+  font-size: f.px(25)
+
+.teacherText
+  font-size: f.px(25)
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: absolute
+  bottom: f.px(30)
+  width: f.px(320)
+  @include m.media(laptop)
+    font-size: f.px(16)
+
+  @include m.media(phone, tablet)
+
+.imgTeacher
+  transform: scaleX(1.4) scale(0.7) translateY(-20%)
+  @include m.media(laptop)
+    transform: scaleX(1.4) scale(0.55) translateY(-35%)
+
+.dateAndTime
+  align-items: flex-start
+  display: flex
+  justify-content: space-between
+  @include m.media(tablet, phone)
+    width: f.px(190)
+    @include m.gap($pr: f.px(0))
+
+.date
+  @include m.gap($pr: f.px(70))
+  @include m.media(tablet, phone)
+    @include m.gap($pr: f.px(50))
+
+.author
+  @include m.gap($pr: f.px(70))
+
+.strongText
+  font-weight: 500

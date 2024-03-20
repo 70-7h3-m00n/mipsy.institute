@@ -1,0 +1,94 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.flex($fd: column, $jc: center)
+  @include m.gap($mb: f.px(10))
+  @include m.media(laptop, desktop)
+    &::after
+      @include m.gap($ml: f.px(60))
+      content: " "
+      width: 100%
+      border-top: 1px solid #D1D1D1
+  &:nth-last-child(1)
+    @include m.gap($mb: 0)
+
+.isOpen
+  & .topic
+    display: block
+
+.title
+  @include m.flex($ai: center)
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(10))
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(15))
+  // cursor: pointer
+
+.icon
+  @include m.gap($mr: f.px(20))
+  & > *
+    @include m.sizeIcon($w: 40, $h: 40)
+    & path
+      // @include m.dye(stroke, #6F01C6)
+      // stroke-width: f.px(0.8)
+
+.pTitle
+  @include m.gap($mb: 0)
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(22)
+  font-weight: 500
+  line-height: 120%
+
+.p
+  @include m.gap($mb: 0)
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+  @include m.media(laptop, desktop)
+    font-size: f.px(18)
+  font-weight: 300
+
+.bold
+  font-weight: 500
+
+.topic
+  display: none
+  & > .p
+    @include m.media(phone, tablet)
+      @include m.gap($mb: f.px(8), $ml: f.px(60))
+    @include m.media(laptop, desktop)
+      @include m.gap($mb: f.px(10), $ml: f.px(60))
+
+.list
+  @include m.gap($mtb: f.px(0), $pl: f.px(62))
+  list-style: none
+
+.item
+  @include m.flex($ai: center)
+  &::before
+    content: '•'
+    color: #F87E1B
+    font-size: f.px(35)
+    line-height: 10%
+    @include m.gap($mr: f.px(14))
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(8))
+    
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(12))
+    font-size: f.px(18)
+
+.description
+  color: #6F01C6
+  font-size: 22px
+  font-weight: 350
+  line-height: 120%
+  @include m.gap($ml: f.px(62), $pt: f.px(25))
+  border-top: 1px solid #D1D1D1
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+    font-weight: 300
+    @include m.gap($pt: f.px(18))

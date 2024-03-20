@@ -1,0 +1,48 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  // width: 500px
+  // margin: 0 auto
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(38))
+    @include m.gap($pb: f.px(18))
+    padding: 1em
+  @include m.media(laptop, desktop)
+    @include m.gap($mt: f.px(76))
+    @include m.gap($pb: f.px(56))
+    // padding-left: 9em
+    // padding-right: 4em
+  color: white
+  font-family: Stem, sans-serif
+  h1
+    font-weight: 500
+    font-size: 44px
+  p
+    font-weight: 350
+    font-size: 20px
+  .last
+    background: #B250FF
+    font-weight: 500
+    font-size: 22px
+    padding: 30px
+    margin-top: 2em
+    line-height: 130%
+    border-radius: 30px 0
+
+.redDot
+  list-style-type: none
+  margin-left: -2.4em
+  li
+    padding-bottom: 1.5em
+    color: white
+    font-weight: 350
+    font-size: 20px
+    display: flex
+    // align-items: flex-start
+    &::before
+      content: '●'
+      color: #F87E1B
+      padding-right: 0.7em

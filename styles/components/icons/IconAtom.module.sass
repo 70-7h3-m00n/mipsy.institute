@@ -1,0 +1,31 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.flex
+  // height: 200px
+  // @include m.gap($m: f.px(10, em))
+  &.small
+    @include m.sizeIcon($w: 216, $h: 174)
+  &.regular
+    @include m.sizeIcon($w: 216, $h: 174)
+  &.large
+    @include m.sizeIcon($size: 1.9, $w: 216, $h: 174)
+  &.responsive
+    width: 100%
+  &.crho
+    & path
+      @include m.dye(stroke, c.$rho)
+  &.cnu
+    & path
+      @include m.dye(stroke, c.$nu)
+  &.calpha
+    & path
+      @include m.dye(stroke, c.$alpha)
+  &.barelyVisible
+    & path
+      opacity: .1
+  &.slightlyVisible
+    & path
+      opacity: .2

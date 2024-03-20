@@ -1,0 +1,43 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  @include m.media(phone, tablet)
+    display: none
+  @include m.gap($pt: f.px(1))
+  ul
+    li
+      a
+        color: #FFF
+        font-size: f.px(12)
+        font-weight: 350
+        &:hover
+          color: #F87E1B 
+
+.isJournal
+  a
+    color: #000 !important
+    &:hover
+      color: #F87E1B !important
+
+.linkList
+  @include m.gap($pl: f.px(0))
+  display: flex
+  list-style: none
+  position: relative
+
+.triangle
+  @include m.gap($mlr: f.px(7))
+  display: inline-block
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 4px 0 4px 6px
+  border-color: transparent transparent transparent #FFF
+
+.isJournal
+  @include m.gap($mt: f.px(45), $mb: f.px(0))
+  .triangle
+    border-color: transparent transparent transparent #000  

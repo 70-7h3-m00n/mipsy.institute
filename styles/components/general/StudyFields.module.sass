@@ -1,0 +1,38 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.gap($m: 0, $p: 0)
+  &.tooltip
+    @include m.flex($fw: wrap)
+    & .studyField
+      @include m.gap($mb: f.px(12), $mr: f.px(15))
+  &.aside
+    & .studyField
+      @include m.gap($mb: f.px(10))
+  &.orange
+    border: 1px solid #6F01C6
+  &.flexend
+    @include m.gap($mt: f.px(25), $mlr: f.px(12))
+    @include m.media(phone)
+      display: block
+      font-size: 10px
+      @include m.gap($mt: f.px(16), $ml: f.px(12))
+      @include m.gap($mr: f.px(0))
+      & .studyField
+        @include m.gap($mb: f.px(2))
+      & > *
+        &:nth-of-type(2)
+          order: 5
+          display: flex
+        &:nth-of-type(2n)
+          justify-content: flex-start
+          &::before
+            content: ''
+            width:47%
+            flex-shrink: 200
+        
+
+.studyField
+  @include m.flex

@@ -1,0 +1,42 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  @include m.gap($pb: f.px(0), $pt: f.px(84))
+  @include m.media(tablet, phone)
+    @include m.gap($pb: f.px(0), $pt: f.px(50))
+
+
+.title
+  position: absolute
+  top: f.px(0)
+  display: inline-block
+  font-weight: 500
+  @include m.media(laptop, desktop)
+    @include m.gap($pt: f.px(87), $mb: f.px(0))
+    font-size: f.px(44)
+  @include m.media(tablet, phone)
+    transform: translateY(f.px(65))
+    @include m.gap($pt: f.px(0))
+    font-size: f.px(33)
+.tag
+  z-index: 2
+  height: 100%
+  display: inline-block
+  position: relative
+  @include m.gap( $mb: f.px(10))
+  align-self: center
+  & > *
+    position: absolute
+    @include m.media(laptop, desktop)
+      top: f.px(9)
+      left: f.px(430)
+      @include m.gap($plr: f.px(26), $ptb: f.px(8), $mb:f.px(10))
+    @include m.media(phone, tablet)
+      @include m.gap($plr: f.px(34), $ptb: f.px(11), $mb:f.px(20))
+      // font-size: f.px(12)
+      transform: translate(f.px(0), f.px(-30))
+      // top: f.px(-37)
+      // left: f.px(-300)

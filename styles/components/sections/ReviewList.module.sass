@@ -1,0 +1,105 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.box
+  position: relative
+  @include m.gap($mb: f.px(100))
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  @include m.media(phone, tablet)
+    justify-content: center
+
+.container
+  display: flex
+  flex-direction: column
+  border-radius: f.px(20)
+  background: #6F01C6
+  max-width: 48.7%
+  
+  @include m.media(laptop, desktop)
+    @include m.gap( $plr: f.px(40), $pt: f.px(33), $mb: f.px(27))
+  @include m.media(phone, tablet)
+    max-width: 100%
+    @include m.gap($mtb: f.px(15), $plr: f.px(30), $ptb: f.px(23))
+  p
+    color: white
+    @include m.media(phone, tablet)
+      // max-width: 25ch
+      font-size: f.px(12)
+  @include m.media(laptop, desktop)
+    font-size: f.px(16)
+
+  font-weight: 100
+  line-height: 120%
+  position: relative
+
+.upper
+  display: flex
+
+.img
+  display: flex
+  // object-fit: cover
+  // width: fit-content
+  min-width: f.px(100)
+  max-height: f.px(100)
+  // max-height: f.px(260)
+  @include m.gap($mb: f.px(25))
+  border-radius: f.px(20)
+  overflow: hidden
+
+.review
+  line-height: 130%
+  @include m.media(phone, tablet)
+    line-height: 100%
+  // padding-right: 30px
+
+.name
+  @include m.gap($ml: f.px(24))
+  font-weight: 500
+  display: flex
+  flex-direction: column
+  text-transform: uppercase
+  p
+    @include m.media(phone, tablet)
+      font-size: f.px(12)
+    @include m.gap($mb: f.px(8))
+    font-weight: 500
+
+.trigger
+  position: absolute
+  bottom: 0
+
+.title
+  font-weight: 500
+  line-height: 120%
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(50))
+    font-size: f.px(36)
+    @include m.gap($mb: 0, $pt: f.px(30))
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(31))
+    font-size: f.px(64)
+    line-height: 110%
+    @include m.gap($mb: 0, $pt: f.px(62))
+
+.subtitle
+  @include m.gap($mb: 0, $pt: f.px(20), $pb: f.px(57))
+  color: #424242
+  font-size: f.px(20)
+  font-weight: 500
+  max-width: f.px(570)
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+    @include m.gap($pb: f.px(5))
+    
+.icon
+  position: absolute
+  right: 0
+  top: f.px(-105) 
+  @include m.media(laptop)
+    top: f.px(-90) 
+  @include m.media(phone, tablet)
+    display: none
+  // transform: translate(800px, -120px)

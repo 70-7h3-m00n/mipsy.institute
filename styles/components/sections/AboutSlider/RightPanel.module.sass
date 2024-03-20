@@ -1,0 +1,93 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/utils/mixin/media' as bp
+
+  
+.right-panel
+  position: relative
+  // flex: 1
+  flex-basis: 50%
+  flex-shrink: 0
+  transform: translateX(0)
+  transition:  transform 0.5s ease
+  // width: f.px(891)
+  // height: f.px(555)
+  @include m.media(laptop)
+    flex-basis: 40%
+  @include m.media(phone, tablet)
+    flex-basis: 20%
+    // overflow-x: auto
+    // transform: translateX(f.px(100))
+  // & > *
+  //   border-radius: f.px(35)
+  //   width: f.px(891)
+  //   height: f.px(595)
+
+
+.slide-out 
+  // opacity: 0
+  transition:  transform 0.5s ease
+  transform: translateX(100%)
+  
+
+
+.slide-in 
+  // background: red
+  border-radius: 40px
+  // opacity: 1
+  transition:  transform 0.5s ease
+  transform: translateX(0)
+
+.img
+  position: absolute
+  // filter: grayscale(21%) brightness(105%) sepia(25%) 
+  // color-interpolation-filters: #6F01C6
+  // width: 100%
+  // height: auto
+  // object-fit: cover
+  @include m.media(desktop)
+    // object-fit: fill
+    // height: f.px(575)
+    // width: f.px(575)
+    overflow: hidden
+  @include m.media(laptop)
+    height: f.px(575)
+    width: f.px(560)
+  @include m.media(tablet)
+    height: f.px(375)
+    width: f.px(360)
+  @include m.media(phone)
+    height: f.px(377)
+    width: f.px(362)
+  & > *
+    object-fit: cover
+    border-radius: f.px(40)
+    @include m.media(phone, tablet)
+      border-radius: f.px(11)
+    & > *
+      object-fit: cover
+  // @include m.media(laptop)
+    // height: f.px(585)
+    // width: f.px(580)
+  // transform: translateX(f.px(100))
+
+.filterImg
+  position: relative
+
+.filter
+  border-radius: f.px(36)
+  @include m.media(phone, tablet)
+    border-radius: f.px(14)
+  position: absolute
+  top: 0
+  right: 0
+  bottom: f.px(5)
+  left: 0
+  background: #6F01C6
+  z-index: 1
+  opacity: 0.05
+.innerImg
+  border-radius: f.px(36)
+  @include m.media(phone, tablet)
+    border-radius: f.px(11)

@@ -1,0 +1,48 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.contentBox
+  display: flex
+  @include m.gap($mtb: f.px(60))
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(28))
+
+.imgContainer
+  flex: 0.18
+  height: f.px(223)
+  width: f.px(173)
+  
+
+.img
+  clip-path: circle(32% at 50% 30%)
+  object-fit: cover
+
+.textContent
+  flex: 1
+  display: flex
+  flex-direction: column
+
+.textContentSpecialization
+  flex: 0.2
+  @include m.gap($ml: f.px(30))
+  
+  max-width: f.px(550)
+  @include m.media(phone, tablet)
+    @include m.gap($ml: f.px(11))
+  p
+    font-size: f.px(36)
+    @include m.media(phone, tablet)
+      font-size: f.px(14)
+
+.textContentComment
+  @include m.gap($pl: f.px(30))
+  @include m.media(phone, tablet)
+    @include m.gap($pl: f.px(11))
+
+  p
+    @include m.gap($mb: f.px(24))
+    @include m.media(phone, tablet)
+      @include m.gap($mb: f.px(16))
+  // flex: 0.2
+  // max-width: f.px(900)

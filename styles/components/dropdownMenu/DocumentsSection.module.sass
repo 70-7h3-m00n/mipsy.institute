@@ -1,0 +1,27 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.wrapper
+  @include m.gap($mtb: f.px(27))
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  font-size: 16px
+  font-weight: 500
+  & p
+    margin: 1px
+
+.btn
+  font-size: 16px
+  font-weight: 350
+  color: #FD521B
+  margin-top: 30px
+  @include m.gap($ptb: f.px(13), $plr: f.px(90))
+  border-radius: f.px(5)
+  border: 2px solid #FD521B
+  transition: background 0.5s ease, color 0.5s ease
+  &:hover
+    background: #FD521B
+    color: white

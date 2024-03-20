@@ -1,0 +1,46 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.contentBox
+  @include m.gap($mtb: f.px(50))
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(25))
+
+.icon
+  @include m.sizeIcon($w: 41, $h: 41)
+  @include m.media(phone, tablet)
+    @include m.sizeIcon($w: 25, $h: 25)
+
+.innerBox
+  @include m.gap($mb: f.px(34))
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(25))
+  &:last-child
+    @include m.gap($mb: f.px(0))
+  p
+    margin: 0
+
+.iconBox
+  @include m.gap($pl: f.px(35), $pr: f.px(22))
+  @include m.media(phone, tablet)
+    @include m.gap($pl: f.px(0), $pr: f.px(22))
+
+.titleBox
+  display: flex
+  align-items: center
+  @include m.gap($pb: f.px(20))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(0))
+  p
+    font-size: f.px(35)
+    font-weight: 500
+    @include m.media(phone, tablet)
+      font-size: f.px(16)
+      font-weight: 500 !important
+
+.title
+  margin: 0
+
+.text
+  font-size: f.px(40)

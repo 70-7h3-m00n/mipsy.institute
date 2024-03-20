@@ -1,0 +1,95 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  height: 235px
+  @include m.media(phone, tablet)
+    height: fit-content
+    border: none
+    margin-top: 10
+  border: 3px solid c.$alpha
+  @include m.media(laptop, desktop)
+    margin-top: 30px
+  border-radius: 0 0 100px 0
+  
+
+.text
+  display: flex
+  @include m.media(laptop, desktop)
+    justify-content: space-around
+    align-items: baseline
+    height: 100%
+    @include m.gap($mt: f.px(40))
+  @include m.media(phone, tablet)
+    flex-direction: column
+    align-items: center
+    width: 100%
+    
+    
+    
+.one
+  &:nth-child(3)
+    // max-width: 220px
+    @include m.media(phone, tablet) 
+      display: none
+  &:nth-child(4)
+    @include m.media(laptop, desktop)
+      display: none
+    // max-width: 220px
+    
+  display: flex
+  flex-direction: column
+  & a 
+      // word-wrap: break-word
+      font-size: 16px
+      // line-height: 21.6px
+  & span
+    font-weight: 500
+    @include m.media(laptop, desktop)
+      @include m.gap($pb: f.px(20))
+  @include m.media(phone, tablet)
+    border-radius: f.px(20)
+    // margin: 10px
+    @include m.gap( $mtb: f.px(7), $ptb: f.px(15))
+    max-height: 100px
+    align-items: center
+    border: 1px solid #6F01C6
+    // max-width: 100px
+    width: 100%
+    background: #FFF
+
+    & span
+      font-size: 18px
+    & p
+      font-size: 14px
+      font-weight: 350
+      @include m.media(phone, tablet)
+        @include m.gap( $mtb: f.px(10))
+        font-size: f.px(12)
+        text-align: center
+      
+        max-width: 300px
+      @include m.media(tablet)
+        max-width: 400px
+    & a 
+      font-size: 14px
+  @include m.media(laptop, desktop)
+    max-width: f.px(270)
+    & span
+      font-size: 22px
+    & p
+      font-size: 18px
+      line-height: 21.6px
+    
+
+.phoneNumber
+  color: black
+  text-decoration: underline
+  text-decoration-skip-ink: auto
+  text-underline-offset: 4px
+  font-size: 18px
+  @include m.media(phone, tablet)
+    &:nth-of-type(1)
+      text-decoration: none
+      

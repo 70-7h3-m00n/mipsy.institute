@@ -1,0 +1,77 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+.container
+  @include m.gap($pb: f.px(0), $pt: f.px(0))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(50))
+  background: #FDFDFD
+
+.onProfessions
+  @include m.gap($pt: f.px(90))
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(50))
+
+.course
+  @include m.gap($pb: f.px(90))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(50))
+
+.title
+  display: inline-block
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(15))
+    font-size: f.px(26)
+    max-width: f.px(200)
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(30))
+    font-size: f.px(44)
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.tag
+  z-index: 2
+  height: 100%
+  display: inline-block
+  position: relative
+  @include m.gap( $mb: f.px(20))
+  align-self: center
+  & > *
+    position: absolute
+    @include m.media(laptop, desktop)
+      top: f.px(-10)
+      left: f.px(21)
+      @include m.gap($plr: f.px(26), $ptb: f.px(8), $mb:f.px(10))
+    @include m.media(tablet, phone)
+      @include m.gap($plr: f.px(20), $ptb: f.px(5), $mb:f.px(10))
+      top: f.px(-28)
+      left: f.px(40)
+
+.desc
+  @include m.media(phone, tablet)
+    font-size: f.px(15)
+    @include m.gap($mb: f.px(7))
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(30))
+    font-size: f.px(20)
+  @include m.dye(c, c.$theta)
+
+.highlight
+  color: #6F01C6
+  font-weight: 350
+
+.teachers
+  position: relative
+  @include m.media(laptop, desktop)
+    // @include m.gap($mb: f.px(50, em))
+  @include m.media(phone, tablet)
+    // @include m.gap($mb: f.px(30))
+    height: f.px(170)
+    & > *
+      height: f.px(170)
+
+.btnContainer
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    text-align: center

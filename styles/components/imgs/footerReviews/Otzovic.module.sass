@@ -1,0 +1,18 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  cursor: pointer
+  background: white
+  height: f.px(42)
+  width: f.px(97)
+  display: flex
+  justify-content: center
+  align-items: center
+  @include m.gap($mtb: f.px(10))
+  border: f.px(1) solid #F87E1B
+  border-radius: f.px(4)
+  &:hover
+    opacity: 0.8
+  

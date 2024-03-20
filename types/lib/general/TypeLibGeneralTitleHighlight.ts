@@ -1,0 +1,3 @@
+type TypeLibGeneralTitleHighlight = boolean
+
+export default TypeLibGeneralTitleHighlight

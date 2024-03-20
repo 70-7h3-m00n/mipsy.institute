@@ -1,0 +1,66 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  z-index: 1
+  display: flex
+  flex-direction: column
+  background: #FEF2E8
+  @include m.gap($pt: f.px(25), $pb: f.px(0))
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(50))
+
+.flexContainer
+  display: flex
+  @include m.media(phone, tablet)
+    display: none
+
+.flexContainerMobile
+  @include m.media(laptop, desktop)
+    display: none
+
+.heading
+  display: flex
+  align-items: center
+.title
+  display: inline-block
+  @include m.gap($pt: f.px(53), $pb: f.px(31), $mb: f.px(0))
+  color: #F87E1B
+  font-size: f.px(44)
+  font-style: normal
+  font-weight: 500
+  line-height: 120%
+  @include m.media(phone, tablet)
+    font-size: f.px(33)
+    @include m.gap($pt: f.px(5), $pb: f.px(25), $mb: f.px(0))
+
+
+.tag  
+  display: inline-block
+  @include m.gap($pl: f.px(25), $pt: f.px(24))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(22), $pt: f.px(0))
+  & > *
+    @include m.gap($ptb: f.px(8), $plr: f.px(20))
+
+.fullContainer
+  display: flex
+  justify-content: space-between
+  @include m.media(phone, tablet)
+    // justify-content: center
+    display: block
+
+.content
+  flex-basis: 90%
+
+.icon
+  // position: absolute
+  // flex-basis: 10%
+  // max-height: f.px(600)
+  @include m.gap($pt: f.px(87))
+  display: flex
+  justify-content: center
+  @include m.media(phone, tablet)
+    display: none

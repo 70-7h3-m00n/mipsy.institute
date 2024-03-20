@@ -1,0 +1,40 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.wrapper
+  display: flex
+  justify-content: space-between
+  font-weight: 100
+  @include m.gap($pb: f.px(20), $mb: f.px(20), $mt: f.px(0), $pl: f.px(0))
+  border-bottom: 1px solid  #D8D8D8
+
+.studyField
+  
+  @include m.flex
+
+.mainFields
+  color: black
+  cursor: pointer
+  font-size: f.px(14)
+  @include m.flex($ai: center)
+  @include m.gap($ptb: f.px(11), $plr: f.px(18))
+  border-radius: f.px(40)
+  text-align: center
+  font-weight: 300
+  border: 1px solid #6F01C6
+  // white-space: nowrap
+  @include m.gap($ptb: f.px(11), $plr: f.px(20), $mb: f.px(0), $mlr: f.px(7))
+  transition: background 0.5s ease, color 0.5s ease
+  &:hover
+    background: #6F01C6
+    color: white
+
+  &:active
+    color: white
+    background: #6F01C6
+
+.active
+  background: #6F01C6
+  color: white
+  border-radius: f.px(40)

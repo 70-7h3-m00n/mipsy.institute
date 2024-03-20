@@ -1,0 +1,146 @@
+// possibly use vmin for font-size https://youtu.be/IWFqGsXxJ1E
+// right units https://www.youtube.com/watch?v=N5wpD9Ov_To
+// svg https://youtu.be/cWh0de8IhX4
+// :focus https://youtu.be/Mvu5OMGcdVA
+
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+html, body
+  overflow-x: hidden !important
+  @include m.media(phone)
+    font-size: 1rem
+  // font-size: 3vmin
+  // font-size: 30px
+  // font-size: 1.5rem
+  // font-size: 2vw
+  @include m.media(tablet)
+    font-size: 1.2rem
+  @include m.media(laptop)
+    font-size: 0.9rem
+  @include m.media(desktop)
+    font-size: 1rem
+
+html
+  box-sizing: border-box
+  font-family: Stem, sans-serif
+  // scroll-behavior: smooth
+
+main
+  overflow-x: hidden
+
+h1
+  overflow-wrap: break-word
+
+svg
+  width: 100%
+  height: 100%
+
+#yandex-cache-hdr
+  span
+    a
+      svg
+        width: 16px
+        height: 16px
+
+// для ройстата значок телефона
+.roistat-multiwidget-pulsator-img
+  width: 34px !important
+  height: 35px !important
+
+.roistat-multiwidget-pulsator-holder
+  // position: absolute !important
+  bottom: f.px(80) !important
+  right: f.px(36) !important
+  @include m.media(tablet)
+    right: f.px(-13) !important
+    bottom: f.px(70) !important
+  @include m.media(phone)
+    right: f.px(-16) !important
+    bottom: f.px(70) !important
+
+a, button
+  cursor: pointer
+
+a, button
+  outline: f.px(1) solid transparent
+  outline-offset: f.px(-1)
+  transition: outline-offset .25s ease-out, outline-color .25s ease-out
+  &:focus-visible
+    outline-offset: f.px(4)
+    @include m.dye(outline, c.$nu)
+
+input
+  border: f.px(2) solid transparent
+  &:focus-visible
+    border: f.px(2) solid 
+    @include m.dye(border, c.$beta)
+
+section
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(50))
+  @include m.media(laptop, desktop)
+    @include m.gap($pb: f.px(115))
+    overflow: hidden
+// body
+//   background-color: #333
+
+.popup-content
+  max-width: max-content !important
+
+.swiper-container
+  overflow: visible
+
+.swiper-wrapper
+  max-width: max-content !important
+
+.swiper-slide
+  height: auto
+
+.swiper-container-horizontal > .swiper-pagination-bullets
+  bottom: f.px(-20)
+
+.swiper-pagination-bullet-active
+  background-color: c.$beta
+
+html #nprogress .bar 
+  background: c.$beta
+
+html #nprogress .spinner-icon 
+  border-top-color: c.$beta
+  border-left-color: c.$beta
+
+@keyframes anvil
+  0%
+    transform: scale(1) translateY(0px)
+    opacity: 0
+  1%
+    transform: scale(0.96) translateY(10px)
+    opacity: 0
+  100%
+    transform: scale(1) translateY(0px)
+    opacity: 1
+
+div.popup-content
+  width: 100%
+  @include m.media(laptop, desktop)
+    max-width: f.px(708)
+  @include m.media(phone, tablet)
+    @include m.gap($plr: f.px(15))
+  border: none
+  @include m.dye(bg, transparent)
+  animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards
+
+.DiplomaExpandableItem__popup-overlay
+  & .popup-content
+    max-width: max-content
+
+.popup-overlay
+  overflow-y: auto
+  background-color: rgba(0,0,0, .5)

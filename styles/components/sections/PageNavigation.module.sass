@@ -1,0 +1,107 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  display: flex
+  flex-wrap: wrap
+  align-self: center
+  @include m.media(laptop, desktop)
+  @include m.dye(bg, #fbf4ff)
+  @include m.gap($ptb: f.px(0))
+  @include m.media(tablet, phone)
+    display: none
+  
+.wrap
+  // width: 1200px
+
+.navigation 
+  width: 100%
+  z-index: 10
+
+  ul 
+    padding-left: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    list-style: none
+    flex-wrap: wrap
+
+    & li 
+      @include m.gap($mtb: f.px(10))
+      // text-decoration: underline
+      text-underline-offset: f.px(5)
+      &:hover
+        text-decoration-color: #F87E1B
+      & p 
+        margin: 0
+        // color: #000
+        font-family: Stem
+        font-size: f.px(13)
+        font-style: normal
+        font-weight: 350
+        line-height: 120%
+        &:hover
+          color: #F87E1B
+          
+        @include m.media(laptop)
+          font-size: 14px
+        text-transform: uppercase
+        &.active
+          // background: red
+          font-weight: bold
+        &:hover
+          cursor: pointer
+
+.sticky
+  // color: white
+  display: flex
+  justify-content: center
+  ul
+    @include m.gap($plr: f.px(15), $mtb: f.px(0), $ptb: f.px(0))
+    width: 100%
+    max-width: f.px(1200)
+    background: white
+    opacity: 0.9
+
+    li
+      @include m.gap($mtb: f.px(0))
+      p
+        @include m.gap($ptb: f.px(10))
+        font-size: f.px(13)
+  transition: width 1s ease
+  position: fixed
+  width: auto
+  left: 0
+  right: 0
+  top: 0
+  border-radius: 0 0 f.px(25) f.px(25)
+  // background: #6F01C6
+  @include m.media(phone, tablet)
+    display: none
+
+.point
+  height: 1px
+
+.active  
+  // background: red
+  // font-weight: 500
+  // transform-origin: center left
+  // transition: background 0.5s ease
+  // transform: translateX(100%)
+  background: #6F01C6
+  @include m.gap($plr: f.px(15), $ptb: f.px(15))
+  border-radius: 20px
+  color: white
+  // text-decoration: underline
+
+
+.hidden
+  display: none
+
+.whiteLetters
+  color: #fbf4ff
+  ul
+    li
+      p
+        color: #fbf4ff

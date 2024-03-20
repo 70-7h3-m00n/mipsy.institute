@@ -1,0 +1,157 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  width: 100%
+  
+  @include m.media(laptop, desktop)
+    height: f.px(750)
+  @include m.media(laptop)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  color: white
+  position: relative
+  h1
+    font-size: 44px
+    font-weight: 500
+    @include m.gap($mb: f.px(0))
+    @include m.media( tablet, phone)
+      font-size: 36px
+
+.insidecontainer
+  @include m.media(desktop)
+    @include m.gap($ml: f.px(110))
+  @include m.media(laptop, desktop)
+    max-width: 350px
+  @include m.media( tablet, phone)
+    max-width: 500px
+  height: 100%
+  
+
+
+.label
+  display: flex
+  text-align: center
+  @include m.media(laptop, desktop)
+    @include m.gap($ptb: f.px(10), $plr: f.px(16), $mt: f.px(99), $mb: f.px(20))
+  @include m.media( tablet, phone)
+    @include m.gap($ptb: f.px(10), $plr: f.px(16),$mb: f.px(20))
+  display: inline-block
+  background: #F87E1B
+  border-radius: 50px
+  p
+    margin: 0 auto
+    color: #fff
+    font-family: Stem
+    font-size: 12px
+    font-weight: 350
+
+.content
+  position: relative
+  z-index: 2
+  font-size: 20px
+  font-weight: 350
+  @include m.gap($mb: f.px(30))
+  // line-height: 110%
+  p
+    position: relative
+    line-height: 105%
+    z-index: 10
+  
+.linkToTg
+  border-radius: f.px(4)
+  height: f.px(60)
+  background: #F87E1B
+  display: flex
+  cursor: pointer
+  opacity: 1
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
+  &:hover
+    transform: scale(1.05)
+    opacity: 0.8
+  a
+    margin: 0 auto
+    align-self: center
+    font-size: 18px
+    font-weight: 500
+    text-transform: uppercase
+    color: white
+.iconWaves
+  @include m.gap($mb: f.px(46))
+
+.icontg
+  z-index: 1
+  position: absolute
+  @include m.media(desktop, laptop)
+    top: 200px
+    right: -10px
+  @include m.media(phone)
+    top: -20px
+    right: 0px
+  @include m.media( tablet)
+    top: -30px
+    right: 20%
+  top: 0
+  right: 0
+  overflow: hidden
+  transform: translateX(-10%)
+
+.iconportal
+  display: inline-block
+
+.iconSmallPortal
+  position: absolute
+  bottom: f.px(250)
+  left: f.px(50)
+  @include m.media( tablet, phone)
+    bottom: f.px(0)
+    left: f.px(0)
+
+.iconMidPortal
+  position: absolute
+  bottom: f.px(100)
+  left: f.px(220)
+  @include m.media( tablet, phone)
+    scale: 0.85
+    bottom: f.px(0)
+    left: f.px(290)
+
+.iconLargePortal
+  position: absolute
+  bottom: f.px(40)
+  left: f.px(20)
+  transform: rotate(35deg)
+  @include m.media( tablet, phone)
+    display: none
+
+.img
+  position: absolute
+  bottom: -115px
+  right: -10px
+  @include m.media( tablet, phone)
+    display: none
+
+.upperPortalSmall
+  position: absolute
+  top: f.px(100)
+  left: f.px(250)
+  @include m.media( tablet, phone)
+    top: f.px(10)
+    left: f.px(150)
+
+.upperPortalMedium
+  position: absolute
+  top: f.px(30)
+  right: f.px(20)
+  @include m.media( tablet, phone)
+    display: none
+
+.midPortalSmall
+  position: absolute
+  top: 55%
+  right: f.px(0)
+  @include m.media( tablet, phone)
+    top: f.px(100)
+    right: f.px(50)

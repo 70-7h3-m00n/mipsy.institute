@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  position: absolute
+  left: f.px(185)
+  z-index: 2
+  @include m.media(laptop)
+    transform: translateX(f.px(-100))
+  @include m.media(phone, tablet)
+    transform: rotate(25deg)
+    width: f.px(45)
+    left: f.px(55)
+    bottom: f.px(-22)

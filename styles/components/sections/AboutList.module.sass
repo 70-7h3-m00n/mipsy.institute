@@ -1,0 +1,75 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  @include m.media(phone, tablet)
+    // max-width: f.px(400)
+
+.item
+  min-width: f.px(125)
+  max-width: f.px(195)
+  height: f.px(200)
+  @include m.media(phone, tablet)
+    min-width: f.px(115)
+    max-width: f.px(305)
+    min-height: f.px(127)
+    max-height: f.px(128)
+    border-radius: f.px(14)
+  border-radius: f.px(23)
+  display: flex
+  flex: 1
+  flex-direction: column
+  // align-self: baseline
+  &:nth-child(2n)
+    background: #6F01C6
+    color: white
+    .desc
+      max-width: 150px
+      @include m.media(phone, tablet)
+        max-width: 90px
+  &:nth-child(2n+1)
+    background: #F9F0FF
+    .desc
+      color: #333
+      max-width: 150px
+      @include m.media(phone, tablet)
+        max-width: 95px
+    
+  &:nth-child(2)
+    position: relative
+    .filter
+      border-radius: f.px(25)
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: #6F01C6
+      z-index: 4
+      opacity: 0.05
+    background-color: #6F01C6
+    background: url('/assets/imgs/general/lection.jpg')
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+
+.title
+  font-size: f.px(32)
+  font-weight: 500
+  @include m.gap($pl: f.px(25), $pt: f.px(52), $mb: f.px(5))
+  @include m.media(phone, tablet)
+    font-size: f.px(20)
+    @include m.gap($pl: f.px(16), $pt: f.px(33), $mb: f.px(5))
+    
+.desc
+  font-size: f.px(12)
+  font-weight: 350
+  line-height: 130%
+  @include m.gap($pl: f.px(25))
+  @include m.media(phone, tablet)
+    font-size: f.px(8)
+    @include m.gap($pl: f.px(16))

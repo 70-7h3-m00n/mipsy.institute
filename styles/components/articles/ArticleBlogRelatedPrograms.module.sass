@@ -1,0 +1,195 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.relatedPrograms
+  & > *
+  border-radius: f.px(40)
+  @include m.gap($mtb: f.px(90))
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(45))
+
+
+.innerBox
+  background: url('/assets/imgs/article/articleBgRelatedProgramsBig.png')
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  border-radius: f.px(40)
+  @include m.gap($pt: f.px(230), $pb: f.px(174))
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(75), $pl: f.px(0), $pb: f.px(34))
+
+.innerBoxOneProgram
+  background: url('/assets/imgs/article/articleBgRelatedPrograms.png')
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  border-radius: f.px(40)
+  @include m.gap($pt: f.px(140), $pb: f.px(124))
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(55), $pl: f.px(0), $pb: f.px(34))
+
+.relatedProgramsTitle
+  @include m.media(phone, tablet)
+    display: flex
+    justify-content: center
+  p
+    @include m.media(phone, tablet)
+      font-size: f.px(20)
+    
+
+#title
+  font-family: Stem
+  max-width: f.px(970)
+  margin: 0 auto
+  text-align: center
+  @include m.gap($mb: f.px(40))
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(10), $mb: f.px(10))
+    font-size: f.px(12) 
+    justify-self: center
+    line-height: 110%
+    max-width: f.px(310)
+    text-align: center
+
+.relatedProgramsProgram
+  display: flex
+  justify-content: center
+  @include m.gap($mb: f.px(15), $mr: f.px(35), $ml: f.px(80))
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(10), $mlr: f.px(5))
+    justify-content: center
+
+.programTitle
+  width: 100%
+  max-width: f.px(400)
+  @include m.media(phone, tablet)
+    max-width: f.px(160)
+
+#programTitle
+  font-family: Stem 
+  width: 100%
+  font-size: f.px(20) 
+  max-width: f.px(310)
+  @include m.gap($mb: f.px(0), $pl: f.px(23), $mr: f.px(120))
+  @include m.media(phone, tablet)
+    font-size: f.px(10) 
+    font-weight: 100 
+    max-width: f.px(120)
+    @include m.gap($plr: f.px(0), $mb: f.px(10), $mr: f.px(0))
+    
+
+.imgBox
+  min-width: f.px(200)
+  @include m.media( tablet)
+    min-width: f.px(100)
+    max-width: f.px(150)
+    @include m.gap($mr: f.px(15))
+  @include m.media(phone)
+    min-width: f.px(80)
+    max-width: f.px(80)
+    @include m.gap($mr: f.px(10))
+.img
+  border-radius: f.px(10)
+  object-fit: cover
+
+.link
+  text-transform: uppercase
+  white-space: nowrap
+  background: #F87E1B
+  align-self: center
+  @include m.gap($plr: f.px(70), $ptb: f.px(26))
+  @include m.media(laptop )
+    @include m.gap($plr: f.px(40))
+
+  color: white
+  font-size: f.px(18)
+  font-weight: 500
+  border-radius: f.px(4)
+  height: fit-content
+  @include m.media(phone, tablet)
+    align-self: flex-start
+    @include m.gap($plr: f.px(15), $ptb: f.px(15))
+    font-size: f.px(10)
+
+.linkBox
+  display: flex
+  height: 100%
+
+.linkOnly
+  text-transform: uppercase
+  @include m.gap($plr: f.px(50))
+  a
+    font-size: f.px(26)
+    @include m.media(phone, tablet)
+      font-size: f.px(11)
+      @include m.gap($plr: f.px(25), $mt: f.px(15))
+.discount
+  text-align: center
+  @include m.gap( $mb: f.px(15))
+  @include m.media(phone, tablet)
+    @include m.gap( $mb: f.px(0))
+
+.discountBox
+  p
+    font-family: Stem
+    font-size: f.px(40)
+    font-weight: 500 !important
+    @include m.media(phone, tablet)
+      font-size: f.px(16)
+  .discountNum
+    color: #F87E1B
+    font-size: f.px(60)
+    @include m.media(phone, tablet)
+      font-size: f.px(19)
+  .course
+    text-transform: uppercase
+    font-size: f.px(50)
+    text-align: center
+    font-weight: 500 !important
+    @include m.gap( $mb: f.px(15))
+    @include m.media(phone, tablet)
+      font-size: f.px(16)
+      font-weight: 500 !important
+      @include m.gap( $mb: f.px(0))
+  .discountUntil
+    @include m.media(phone, tablet)
+      font-size: f.px(10)
+
+.mobileOnly
+  font-size: f.px(10)
+  @include m.media(laptop, desktop )
+    display: none
+
+#courses
+  font-family: Stem
+  text-align: center
+  font-size: f.px(30)
+  font-weight: 500
+  text-transform: uppercase
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+
+.courseWithDiscount
+  display: inline-flex
+  width: 100%
+  justify-content: center
+  position: relative
+  font-weight: 500
+
+.discountWithDate
+  & > *
+    @include m.media(phone, tablet)
+      font-size: f.px(8)
+  position: absolute
+  top: 0
+  transform: translateX(90%)
+  @include m.media(phone, tablet)
+    transform: translateX(80%)
+
+#date
+    font-size: f.px(18)
+    @include m.media(phone, tablet)
+      font-size: f.px(10)
+

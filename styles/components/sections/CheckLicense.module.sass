@@ -1,0 +1,93 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.media(laptop, desktop)
+    & > *
+      @include m.gap($plr: f.px(0))
+
+.wrapper
+  position: relative
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(50), $plr: f.px(33))
+    border-radius: f.px(50) 0
+  @include m.media(laptop, desktop)
+    @include m.flex($jc: space-between)
+    @include m.gap($ptb: f.px(74), $plr: f.px(70))
+    border-radius: f.px(100) 0 
+  @include m.dye(bg, c.$alpha)
+
+.icon
+  position: absolute
+  @include m.media(laptop, desktop)
+    top: 1em
+    left: 14em
+  @include m.media(phone, tablet)
+    top: 0.3em
+    left: 3em
+
+.smallSpiral
+  position: absolute
+  // width: 10px
+  @include m.media( desktop)
+    right: 7em
+    bottom: 5em
+  @include m.media(laptop)
+    right: 2em
+    bottom: 5em
+  @include m.media(phone, tablet)
+    right: 4em
+    bottom: 7em
+
+.img
+  @include m.media(phone, tablet)
+    display: none
+  @media screen and (max-width: 850px)
+    display: none
+  @include m.media(laptop, desktop)
+    @include m.flex($display: false, $fb: 30%)
+    min-width: f.px(170)
+    max-width: f.px(170)
+    min-height: f.px(170)
+    max-height: f.px(170)
+    @include m.gap($mr: f.px(60))
+    border-radius: f.px(100)
+    overflow: hidden
+
+.text
+  @include m.media(laptop, desktop)
+    @include m.flex($display: false, $fb: 50%, $as: center)
+    @include m.gap($mr: f.px(36))
+
+.title
+  @include m.gap($mb: f.px(10))
+  @include m.media(phone, tablet)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    font-size: f.px(44)
+  font-weight: 500
+  @include m.dye(c, c.$nu)
+
+.p
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(50))
+    font-size: f.px(18)
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(40))
+    font-size: f.px(20)
+    max-width: 31ch
+  font-weight: 300
+  line-height: 130%
+  @include m.dye(c, c.$nu)
+
+
+.btn
+  @include m.media(laptop, desktop)
+    @include m.flex($display: false, $fb: 30%)
+    @include m.gap($mt: f.px(21))
+    max-width: f.px(270)
+    & > *
+      width: 100%
+      & > *
+        width: 100%

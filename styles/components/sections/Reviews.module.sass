@@ -1,0 +1,87 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.gap($ptb: f.px(90))
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(50), $pt: f.px(0))
+
+.standalone
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(38))
+    @include m.gap($pb: f.px(38))
+  @include m.media(laptop, desktop)
+    @include m.gap($mt: f.px(56))
+    @include m.gap($pb: f.px(56))
+
+.title
+  @include m.gap($mb: 0)
+  @include m.media(phone, tablet)
+    font-size: f.px(26)
+  @include m.media(laptop, desktop)
+    font-size: f.px(44)
+  font-weight: 500
+  @include m.dye(c, c.$theta)
+
+.content
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(22, em))
+  @include m.media(laptop, desktop)
+    // @include m.gap($pb: f.px(25))
+  & > *
+    @include m.gap($pb: f.px(30))
+
+
+.reviewCount
+  font-size: 13px
+  font-weight: 700
+  color: #6F01C6
+  display: inline-block
+  border: 1px solid #6F01C6
+  border-radius: f.px(23)
+  @include m.gap($mb: f.px(34), $ptb: f.px(10), $plr: f.px(17))
+  @include m.media(phone, tablet)
+    color: #9B51E0
+    letter-spacing: 1.1px
+    @include m.gap($mb: f.px(15), $ptb: f.px(10), $plr: f.px(17))
+    font-weight: 500
+    font-size: f.px(11)
+
+.description
+  // position: absolute
+  // top: 20px
+  @include m.gap($mt: f.px(30), $mb: f.px(0))
+  max-width: f.px(570)
+  color: #424242
+  font-family: Stem
+  font-size: f.px(20)
+  font-style: normal
+  font-weight: 300
+  line-height: 130%
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(15))
+    color: #000
+    font-family: Stem
+    font-size: f.px(15)
+    font-style: normal
+    font-weight: 350
+    line-height: 130%
+
+.tag
+  z-index: 2
+  height: 100%
+  display: inline-block
+  position: relative
+  @include m.gap( $mb: f.px(12))
+  align-self: center
+  & > *
+    // position: absolute
+    @include m.media(laptop, desktop)
+      top: -10px
+      left: 25px
+      @include m.gap($plr: f.px(26), $ptb: f.px(8), $mb:f.px(10))
+    @include m.media(phone, tablet)
+      @include m.gap($plr: f.px(20), $ptb: f.px(5), $mb:f.px(0))
+      top: f.px(-30)
+      left: f.px(-295)

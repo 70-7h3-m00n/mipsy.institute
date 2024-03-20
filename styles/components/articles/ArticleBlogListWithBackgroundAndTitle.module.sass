@@ -1,0 +1,51 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.contentBox
+  @include m.gap($mb: f.px(50))
+
+.blogList
+  box-shadow: 4px 4px 10px 0px rgba(192, 192, 192, 0.70)
+  @include m.gap($mtb: f.px(47), $ptb: f.px(60), $pl: f.px(35))
+  border-radius: f.px(40)
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(19), $ptb: f.px(19), $pl: f.px(10))
+  p
+    font-size: f.px(35)
+    @include m.media(phone, tablet)
+      max-width: f.px(281)
+      font-size: f.px(16)
+    span,.strongText
+      font-weight: 500
+
+.icon
+  @include m.sizeIcon($w: 37, $h: 37)
+  min-width: f.px(37)
+  display: flex
+  @include m.media(phone, tablet)
+    @include m.sizeIcon($w: 17, $h: 17)
+    min-width: f.px(17)
+
+  align-content: center
+  @include m.media(phone, tablet)
+    @include m.sizeIcon($w: 17, $h: 17)
+
+.twoColumns
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: repeat(2, minmax(200px, 1fr))
+  grid-auto-flow: row
+  @include m.media(phone, tablet)
+    grid-template-columns: repeat(1, minmax(200px, 1fr))
+    align-items: baseline
+.innerBox
+  display: flex
+  align-items: flex-start
+  @include m.gap($mb: f.px(10))
+  p
+    font-size: f.px(27)
+    @include m.gap($mb: f.px(0), $ml: f.px(25))
+    @include m.media(phone, tablet)
+      font-size: f.px(16)
+      @include m.gap($ml: f.px(10))

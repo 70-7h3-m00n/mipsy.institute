@@ -1,0 +1,59 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+@use '@/styles/utils/mixin/media' as bp
+
+.container
+  max-height: f.px(595)
+  background: #6F01C6
+  border-radius: f.px(36)
+  color: white
+  @include m.gap($pb: f.px(113), $pl: f.px(71), $pr: f.px(103))
+  @include m.media(laptop)
+    height: f.px(564)
+    @include m.gap( $pr: f.px(53))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(70), $pl: f.px(24), $pr: f.px(17))
+    border-radius: f.px(11)
+  .first, .second
+    font-size: f.px(20)
+    font-weight: 300
+    line-height: 130%
+    @include m.media(phone, tablet)
+      font-size: f.px(12)
+      
+    
+
+.title
+  font-size: f.px(44)
+  font-weight: 500
+  @include m.gap($mb: f.px(15), $mt: f.px(49))
+  @include m.media(phone, tablet)
+    font-size: f.px(30)
+    @include m.gap($mt: f.px(21))
+
+.first
+  @include m.gap($mb: f.px(15))
+
+.second
+  @include m.gap($mb: f.px(0))
+
+.tagWhite
+  display: inline-block
+  @include m.gap($mt: f.px(45), $mr: f.px(12))
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(21), $mr: f.px(12))
+  & > *
+    @include m.gap($ptb: f.px(8), $plr: f.px(21))
+    @include m.media(phone, tablet)
+      @include m.gap($ptb: f.px(5), $plr: f.px(8))
+
+.tagOrange
+  display: inline
+  // @include m.gap($mt: f.px(25))
+  & > *
+    @include m.gap($ptb: f.px(8), $plr: f.px(24))
+    @include m.media(phone, tablet)
+      @include m.gap($ptb: f.px(5), $plr: f.px(17))
+
+

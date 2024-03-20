@@ -1,0 +1,174 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  z-index: 2
+  & > *
+    position: relative
+    // z-index: 13
+  @include m.media(phone, tablet)
+    // display: flex
+    position: relative
+    z-index: 3
+    overflow: hidden
+    padding-top: f.px(16)
+    
+  @include m.media(laptop, desktop)
+    overflow: visible
+    // padding-top: f.px(52)
+    padding-bottom: f.px(82)
+  padding-bottom: 0
+  @include m.dye(bg, c.$alpha)
+
+.top
+  @include m.media(laptop, desktop)
+    @include m.gap($mt: f.px(52))
+    // @include m.flex($jc: space-between, $ai: center)
+    @include m.flex($jc: space-between)
+  // @include m.media(phone, tablet)
+  //   display: flex
+  //   flex-direction: column
+
+.mobileFlex
+  height: 100%
+  @include m.media(phone, tablet)
+    display: flex
+    flex-direction: column
+
+.heading
+  @include m.media(laptop, desktop)
+    @include m.gap($mr: f.px(30))
+    @include m.flex($fd: column)
+    flex-grow: 1
+
+.label
+  @include m.media(laptop, desktop)
+    @include m.flex($as: start)
+
+.title
+  position: relative
+  z-index: 1
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(15))
+    font-size: f.px(36)
+  @include m.media(laptop, desktop)
+    min-width: 12ch
+    // max-width: 15ch
+    @include m.gap($mb: f.px(35))
+    font-size: f.px(64)
+  font-weight: 500
+  line-height: 110%
+  @include m.dye(c, c.$nu)
+
+.descriptionDesktop
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(30))
+    @include m.dye(c, c.$nu)
+    & p
+      // max-width: 45ch
+      font-size: f.px(20)
+      font-weight: 300
+      &:nth-last-child(1)
+        @include m.gap($mb: f.px(0))  
+      & strong
+        font-weight: 500
+
+.descriptionMobile
+  .moreText
+    color: #F87E1B
+    text-decoration-line: underline
+    text-underline-offset: f.px(2)
+    font-size: f.px(15)
+    font-weight: 500
+    line-height: 130%
+    @include m.gap($pt: f.px(5))
+  @include m.media(phone, tablet)
+    order: -1
+    @include m.gap($mb: f.px(45))
+    @include m.dye(c, c.$nu)
+    & p
+      font-size: f.px(15)
+      font-weight: 300
+      &:nth-last-child(1)
+        @include m.gap($mb: f.px(0))  
+      & strong
+        font-weight: 500
+  @include m.media(laptop, desktop)
+    display: none
+
+.pic
+  position: relative
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(30))
+  // @include m.media(laptop, desktop)
+  //   @include m.gap($mb: f.px(87))
+
+.discount
+  position: absolute
+  transform: translateY(f.px(-20))
+  @include m.media(phone, tablet)
+    transform: translateY(f.px(-45))
+  @include m.media(laptop, desktop)
+    transform: translate(f.px(-75), f.px(-48))
+  z-index: 1
+
+.img
+  border-radius: f.px(100) 0
+  overflow: hidden
+  @include m.media(laptop, desktop)
+    position: relative
+    width: f.px(400)
+    height: f.px(400)
+    transform: translateY(f.px(-23))
+  @include m.media(phone, tablet)
+    display: none
+
+.imgMobile
+  border-radius: f.px(100) 0
+  overflow: hidden
+  @include m.media(laptop, desktop)
+    display: none
+  @include m.media(phone)
+    max-width: f.px(400)
+    max-height: f.px(255)
+    margin: 0 auto
+
+
+.btnsMobile
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(17))
+    & > *:nth-child(1)
+      @include m.gap($mb: f.px(17))
+  @include m.media(laptop, desktop)
+    display: none
+
+.btnsDesktop
+  // @include m.gap($mb: f.px(39))
+  @include m.media(phone, tablet)
+    display: none
+  @include m.media(laptop, desktop)
+    @include m.gap($pr: f.px(147))
+    @include m.flex($as: flex-end)
+    margin-top: auto
+    width: 100%
+    & > *
+      width: 100%
+      & > *
+        width: 100%
+    & > *:nth-child(1)
+      @include m.gap($mr: f.px(30))
+
+.info
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(46))
+  @include m.media(laptop, desktop)
+    // margin-top: f.px(100)
+    transform: translateY(f.px(35))
+
+.mobiledesc
+  display: inline-block
+  @include m.gap($mb: f.px(0))
+  // white-space: nowrap
