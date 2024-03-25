@@ -98,9 +98,9 @@ export default function SearchProgramsDropDown() {
     fetchPrograms()
   }, [])
   const firstShownPrograms = [
-    programs[11],
-    programs[19],
-    programs[8],
+    // programs[11],
+    // programs[19],
+    // programs[8],
     programs[0]
   ]
   useEffect(() => {
