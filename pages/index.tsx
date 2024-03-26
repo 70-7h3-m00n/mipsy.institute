@@ -102,8 +102,8 @@ const HomePage: NextPage<TypePageHomeProps> = ({
         title={seoParams.title}
         description={seoParams.desc}
         canonical={seoParams.canonical}
-        nofollow={prod ? false : true}
-        noindex={prod ? false : true}
+        nofollow={true}
+        noindex={true}
         openGraph={{
           url: seoParams.canonical,
           title: seoParams.title,
