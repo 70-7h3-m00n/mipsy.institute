@@ -18,22 +18,22 @@ const WebinarsPage: NextPage<TypePageWebinarsProps> = ({
   useHandleContextStaticProps({ programs })
 
   const webinarsSorted: TypeLibWebinars = sortBasedOnNumericOrder({ webinars })
-  const seoParams = {
-    title: `Вебинары | ${company.desc} | ${company.name}
-    `,
-    desc: truncate(
-      `${webinarsSorted[webinarsSorted.length - 1].title}, ${
-        webinarsSorted[webinarsSorted.length - 1].name
-      } | ${webinarsSorted[webinarsSorted.length - 2].title}, ${
-        webinarsSorted[webinarsSorted.length - 2].name
-      }`,
-      120
-    ),
-    canonical: `${routes.front.root}${routes.front.webinars}`
-  }
+  // const seoParams = {
+  //   title: `Вебинары | ${company.desc} | ${company.name}
+  //   `,
+  //   desc: truncate(
+  //     `${webinarsSorted[webinarsSorted.length - 1].title}, ${
+  //       webinarsSorted[webinarsSorted.length - 1].name
+  //     } | ${webinarsSorted[webinarsSorted.length - 2].title}, ${
+  //       webinarsSorted[webinarsSorted.length - 2].name
+  //     }`,
+  //     120
+  //   ),
+  //   canonical: `${routes.front.root}${routes.front.webinars}`
+  // }
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={seoParams.title}
         description={seoParams.desc}
         canonical={seoParams.canonical}
@@ -52,7 +52,7 @@ const WebinarsPage: NextPage<TypePageWebinarsProps> = ({
           ],
           site_name: company.name
         }}
-      />
+      /> */}
       <SeoOrganizationJsonLd />
       <WebinarsAlt webinars={webinarsSorted} />
     </>
