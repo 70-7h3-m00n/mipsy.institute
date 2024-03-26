@@ -8,30 +8,30 @@ import { v4 as uuidv4 } from 'uuid'
 const PopupThankyou = ({ close }) => {
   const { program } = useContext(ContextStaticProps)
 
-  useEffect(() => {
-    const tagManagerArgs = {
-      dataLayer: {
-        event: 'lead',
-        ecommerce: {
-          add: {
-            actionField: {
-              id: uuidv4()
-            },
-            products: [
-              {
-                id: (program && program._id) || (program && program.id) || null,
-                name: (program && program.title) || null,
-                price: (program && program.price) || null,
-                type: (program && program.typeLabel) || null
-              }
-            ]
-          }
-        }
-      },
-      dataLayerName: 'dataLayer'
-    }
-    TagManager.dataLayer(tagManagerArgs)
-  }, [])
+  // useEffect(() => {
+  //   const tagManagerArgs = {
+  //     dataLayer: {
+  //       event: 'lead',
+  //       ecommerce: {
+  //         add: {
+  //           actionField: {
+  //             id: uuidv4()
+  //           },
+  //           products: [
+  //             {
+  //               id: (program && program._id) || (program && program.id) || null,
+  //               name: (program && program.title) || null,
+  //               price: (program && program.price) || null,
+  //               type: (program && program.typeLabel) || null
+  //             }
+  //           ]
+  //         }
+  //       }
+  //     },
+  //     dataLayerName: 'dataLayer'
+  //   }
+  //   TagManager.dataLayer(tagManagerArgs)
+  // }, [])
   return (
     <div className={stls.container}>
       <div className={stls.close}>

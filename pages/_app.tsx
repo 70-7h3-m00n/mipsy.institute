@@ -139,7 +139,7 @@ const MyApp = ({ Component, pageProps, router }) => {
   // ?utm_source=edpartners&utm_medium=cpa&utm_campaign=affiliate&cl_uid=7a61af20124c1918ac49130334cd03c8
 
   useEffect(() => {
-    TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
+    // TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
 
     let utms = JSON.parse(sessionStorage.getItem('utms')) || {}
     let utmsAreEmpty = false
