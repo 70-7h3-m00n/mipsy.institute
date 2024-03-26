@@ -13,7 +13,7 @@ Disallow: /ru
 Disallow: /uz
 
 # Host
-Host: https://mip.institute
+Host: https://mipsy.institute
 
 # Sitemaps
-Sitemap: https://mip.institute/sitemap.xml
+Sitemap: https://mipsy.institute/sitemap.xml

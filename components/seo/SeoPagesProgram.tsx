@@ -87,8 +87,8 @@ const SeoPagesProgram: FC<TSeoPagesProgram> = ({
         description={seoParams.desc}
         canonical={seoParams.canonical}
         themeColor={themeColor}
-        nofollow={dev ? true : isNofollow}
-        noindex={dev ? true : isNoindex}
+        nofollow={true}
+        noindex={true}
         {...((parsedMetaRobots && { robotsProps: parsedMetaRobots }) || {})}
         openGraph={{
           url: seoParams.canonical,
