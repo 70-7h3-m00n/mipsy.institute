@@ -31,7 +31,6 @@ const MenuMobile = () => {
       withIcon: true
     },
     { text: 'Преподаватели', href: routes.front.teachers, withIcon: false },
-    { text: 'Вебинары', href: routes.front.webinars, withIcon: false },
     { text: 'Отзывы', href: routes.front.reviews, withIcon: false },
     { text: 'Об институте', href: routes.front.about, withIcon: false },
     {

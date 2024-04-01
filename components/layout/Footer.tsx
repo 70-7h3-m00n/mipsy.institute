@@ -36,10 +36,10 @@ const Footer = () => {
       val: 'Профессии',
       href: routes.front.professions
     },
-    {
-      val: 'Вебинары',
-      href: routes.front.webinars
-    },
+    // {
+    //   val: 'Вебинары',
+    //   href: routes.front.webinars
+    // },
     {
       val: 'Преподаватели',
       href: routes.front.teachers
@@ -56,10 +56,10 @@ const Footer = () => {
       val: 'Об институте',
       href: routes.front.about
     },
-    {
-      val: 'Сведения об образовательной организации',
-      href: routes.front.legal
-    },
+    // {
+    //   val: 'Сведения об образовательной организации',
+    //   href: routes.front.legal
+    // },
     {
       val: 'Контакты',
       href: routes.front.contact
@@ -91,6 +91,7 @@ const Footer = () => {
   return (
     <footer className={stls.container}>
       <Wrapper>
+
       
         <div className={stls.left}>
         
@@ -146,7 +147,7 @@ const Footer = () => {
                 <Logo atFooter/>
               </li>
             </ul>
-            {!isEdpartners ? (
+            {/* {!isEdpartners ? (
               <div className={stls.contact}>
                 <p>Приемная комиссия:</p>
                 <div className={stls.numbers}>
@@ -189,9 +190,11 @@ const Footer = () => {
               </div>
             ) : (
               <PopupFooterReviews />
-            )}
-            
-            <div className={stls.newRight}>
+            )} */}
+            <div className={stls.leaveApp}>
+                <PopupTrigger btn='alpha' cta='submitApplication' />
+              </div>
+            {/* <div className={stls.newRight}>
               <div className={stls.leaveApp}>
                 <PopupTrigger btn='alpha' cta='submitApplication' />
               </div>
@@ -215,17 +218,16 @@ const Footer = () => {
               <a className={stls.linkToLicense} href={routes.external.license} target='_blank'  rel="noreferrer nofollow noindex" >
                 Лицензия на образовательную деятельность №041363 от 14.04.2021 г.
               </a>
-            </div>
+            </div> */}
           </div>
-          <div className={stls.bottom}>
+          {/* <div className={stls.bottom}>
             <FooterBottom />
-          </div>
+          </div> */}
         </div>
-
       </Wrapper>
-      <div className={stls.footerBottom}>
+      {/* <div className={stls.footerBottom}>
         <FooterBottom />
-      </div>
+      </div> */}
     </footer>
   )
 }

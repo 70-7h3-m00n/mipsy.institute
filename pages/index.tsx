@@ -58,9 +58,9 @@ const HomePage: NextPage<TypePageHomeProps> = ({
   })
 
   const seoParams = {
-    title: `МИП - Московский Институт Психологии`,
+    title: `MIPSY - Институт Психологии`,
     desc: truncate(
-      'MIP - Психологический онлайн институт. Получи дистанционное образование со скидкой 30% Дипломы ФРДО. Удобный формат обучения! Актуальный материал с упором на практику.',
+      'MIPSY - Психологический онлайн институт. Получи дистанционное образование со скидкой 30% Дипломы ФРДО. Удобный формат обучения! Актуальный материал с упором на практику.',
       120
     ),
     canonical: routes.front.root
@@ -69,7 +69,7 @@ const HomePage: NextPage<TypePageHomeProps> = ({
   const subtitle = (
     <>
       <p className={stls.leftTitle}>
-        Обучение в МИП осуществляется по заочной форме с применением
+        Обучение в МИПСИ осуществляется по заочной форме с применением
         дистанционных<span className={stls.star}>*</span> технологий. Лекции,
         общение, тестирование проходят в онлайн-формате через образовательную
         платформу. Вы получите научную базу по главным психологическим
@@ -135,19 +135,18 @@ const HomePage: NextPage<TypePageHomeProps> = ({
       </Popup>
 
       <Hero />
-      <Directions />
       <TopCourses />
+      {/* <Directions /> */}
       <ButtonToTop />
       <WhyBother />
       <About />
-      {/* <div className="i-flocktory" data-fl-action="exchange" data-fl-user-email="xname@flocktory.com"></div> */}
       <HowProcessGoes onMain subtitle={subtitle} list={mainList} />
       <Cta
         title={'Подберите программу'}
         desc={'Ответьте на несколько вопросов и подберите программу обучения'}
         cta='chooseProgram'
       />
-      <WhatYouWillLearn title={'Чему вы научитесь в МИП?'} onMain />
+      <WhatYouWillLearn title={'Чему вы научитесь?'} onMain />
       <Teachers
         onMain
         title={'Преподаватели – наставники'}

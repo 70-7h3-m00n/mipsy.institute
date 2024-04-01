@@ -50,6 +50,8 @@ const SeoPagesPrograms: FC<TSeoPagesProgram> = ({
         title={seoParams.title}
         description={seoParams.desc}
         canonical={seoParams.canonical}
+        nofollow={true}
+        noindex={true}
         openGraph={{
           url: seoParams.canonical,
           title: seoParams.title,

@@ -22,10 +22,10 @@ export default function SearchProgramsDropDown() {
         href: routes.front.teachers,
         val: 'Преподаватели'
       },
-      {
-        href: routes.front.webinars,
-        val: 'Вебинары'
-      },
+      // {
+      //   href: routes.front.webinars,
+      //   val: 'Вебинары'
+      // },
       {
         href: routes.front.reviews,
         val: 'Отзывы'
@@ -70,25 +70,25 @@ export default function SearchProgramsDropDown() {
   const [filteredPrograms, setFilteredPrograms] = useState([])
   const [programs, setPrograms] = useState([])
 
-  useEffect(() => {
-    const handleDocumentClick = event => {
-      // Проверяем, является ли цель клика иконкой или ее родителями
-      if (
-        (iconRef && iconRef.current.contains(event.target)) ||
-        (inputRef && inputRef.current.contains(event.target))
-      ) {
-        return
-      }
-      // Если цель клика не связана с иконкой, скрываем инпут
-      setInputVisible(false)
-    }
+  // useEffect(() => {
+  //   const handleDocumentClick = event => {
+  //     // Проверяем, является ли цель клика иконкой или ее родителями
+  //     if (
+  //       (iconRef && iconRef.current.contains(event.target)) ||
+  //       (inputRef && inputRef.current.contains(event.target))
+  //     ) {
+  //       return
+  //     }
+  //     // Если цель клика не связана с иконкой, скрываем инпут
+  //     setInputVisible(false)
+  //   }
 
-    document.addEventListener('click', handleDocumentClick)
+  //   document.addEventListener('click', handleDocumentClick)
 
-    return () => {
-      document.removeEventListener('click', handleDocumentClick)
-    }
-  }, [])
+  //   return () => {
+  //     document.removeEventListener('click', handleDocumentClick)
+  //   }
+  // }, [])
 
   useEffect(() => {
     const fetchPrograms = async () => {
@@ -140,7 +140,7 @@ export default function SearchProgramsDropDown() {
   }, [isEdpartners, partCookie])
   return (
     <div className={stls.searchAndPrograms}>
-      <div className={stls.inputContainer}>
+      {/* <div className={stls.inputContainer}>
         <input
           ref={inputRef}
           className={isInputVisible ? stls.input : stls.inputHidden}
@@ -194,7 +194,7 @@ export default function SearchProgramsDropDown() {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
       <div
         className={stls.desriptionPopup}
         onMouseEnter={directionsOnHoverHandler}
