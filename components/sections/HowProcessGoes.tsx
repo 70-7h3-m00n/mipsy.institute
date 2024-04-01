@@ -1,7 +1,7 @@
 import stls from '@/styles/components/sections/HowProcessGoes.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 import TwoColumns from '@/components/layout/TwoColumns'
-import gif from '@/public/assets/imgs/gif/howProcessGoes.gif'
+import gif from '@/public/assets/imgs/howProcessGoes.png'
 import Image from 'next/image'
 import TagOrange from '../general/TagOrange'
 import classNames from 'classnames'
@@ -39,6 +39,7 @@ const HowProcessGoes = ({processRef, list, subtitle, onMain=false}: ProcessType)
             {subtitle}
             <div className={stls.img}>
               <Image
+              className={stls.howImg}
               width={569}
               height={328}
               src={gif} alt='gif' 

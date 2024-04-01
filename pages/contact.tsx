@@ -30,6 +30,8 @@ const LegalPage: NextPage<TypePageDefaultProps> = ({ programs }) => {
         title={seoParams.title}
         description={truncate(seoParams.desc, 120)}
         canonical={seoParams.canonical}
+        nofollow={true}
+        noindex={true}
         openGraph={{
           url: seoParams.canonical,
           title: seoParams.title,

@@ -37,21 +37,18 @@ const Hero = () => {
           <div className={stls.left}>
             <h1 className={stls.title}>Онлайн-институт психологии</h1>
             <p className={stls.desc}>
-            Освойте востребованную профессию психолога или повысьте квалификацию вместе с МИП
+            Освойте востребованную профессию психолога или повысьте квалификацию вместе с МИПСИ
             </p>
             <div className={stls.btns}>
-              {/* <div className={stls.btn}>
+              <div className={stls.btn}>
                 <PopupTrigger btn='alpha' cta='signUpForCourse' />
               </div>
               <div className={stls.btn}>
                 <PopupTrigger btn='beta' cta='askQuestion' />
-              </div> */}
+              </div>
             </div>
           </div>
           <div className={stls.right}>
-            {/* <div className={stls.iconDesktop} onClick={e => hiddenGem(e)}>
-              <IconAtom large cnu slightlyVisible />
-            </div> */}
             <div className={stls.img}>
               <IconHero />
             </div>
