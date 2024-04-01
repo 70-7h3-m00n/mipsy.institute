@@ -3,12 +3,12 @@ import { themeColor } from '@/config/index'
 const MetaManifest = () => {
   return (
     <>
-      <meta name='application-name' content='Московский Институт Психологии' />
+      <meta name='application-name' content=' Институт Психологии' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='default' />
       <meta
         name='apple-mobile-web-app-title'
-        content='Московский Институт Психологии'
+        content=' Институт Психологии'
       />
       {/* <meta name='format-detection' content='telephone=no' /> */}
       <meta name='mobile-web-app-capable' content='yes' />
