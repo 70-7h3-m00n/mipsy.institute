@@ -23,25 +23,21 @@ import getUtmSourceFromCookie from '../funcs/getUtmSourceFromCookie'
       setSelectedIcon(icon);
     } 
   };
-  const [isEdpartners, setIsEdpartners] = useState(false);
 const partCookie = getCookie('utm')
   useEffect(()=>{
     setTimeout(() => {
       const utmSource = getUtmSourceFromCookie();
-      setIsEdpartners(utmSource === 'edpartners');
     }, 300);
-}, [isEdpartners, partCookie]);
+}, [ partCookie]);
   return (
     <div className={stls.popupWrapper} 
       onMouseLeave={() => handleIconClick(null)}
       >
         <div className={stls.dropdownIcon}>
-          {!isEdpartners && (
             <IconContact
             onMouseEnter={() => handleIconClick('icon1')}
             className={selectedIcon === 'icon1' ? stls.selected : ''}
           /> 
-          )}
           {/* <IconContact
             onMouseEnter={() => handleIconClick('icon1')}
             className={selectedIcon === 'icon1' ? stls.selected : ''}
@@ -55,14 +51,14 @@ const partCookie = getCookie('utm')
             className={selectedIcon === 'icon2' ? stls.selected : ''}
           />
           
-          <IconWeakVision
+          {/* <IconWeakVision
             onMouseEnter={() => handleIconClick('icon4')}
             className={selectedIcon === 'icon4' ? stls.selected : ''}
-          />
-          <IconEnterToPortal
+          /> */}
+          {/* <IconEnterToPortal
             onMouseEnter={() => handleIconClick('icon5')}
             className={selectedIcon === 'icon5' ? stls.selected : ''}
-          />
+          /> */}
         </div>
         <div
           className={classNames(stls.popupContent, {

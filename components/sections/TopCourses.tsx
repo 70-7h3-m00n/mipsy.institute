@@ -21,10 +21,8 @@ const TopCourses = () => {
   const targetTitles = [
     'Психолог-консультант',
     'Когнитивно-поведенческий психотерапевт',
-    'Психолог-диетолог. Нутрициолог',
-    'Гештальт-терапевт',
-    'Клиническая психология',
-    'Детский психолог',
+    'Медиатор',
+    // 'Клиническая психология',
     'Психосоматика и телесная психотерапия',
   ]
   const topCourses = targetTitles.map(title =>
@@ -40,11 +38,12 @@ const TopCourses = () => {
           src={course?.heroPicture?.url}
           alt={course?.title}
           width={390}
-          height={getImageHeight({
-            width: 530,
-            widthInitial: course?.heroPicture?.width,
-            heightInitial: course?.heroPicture?.height
-          })}
+          height={270}
+          // height={getImageHeight({
+          //   width: 430,
+          //   widthInitial: course?.heroPicture?.width,
+          //   heightInitial: course?.heroPicture?.height
+          // })}
         />
       )
     }))
@@ -86,7 +85,7 @@ const TopCourses = () => {
       })}>
       <Wrapper>
 
-        <h2 className={stls.title}>Популярные курсы</h2>
+        <h2 className={stls.title}>Наши программы</h2>
         <div className={stls.tag}>
           <TagOrange>ТОП</TagOrange>
         </div>

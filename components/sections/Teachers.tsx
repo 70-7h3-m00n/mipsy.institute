@@ -94,7 +94,7 @@ const Teachers = ({teachersRef, teachersFromMain, title, onMain=false}: TeacherP
           
         )}
         <p className={stls.desc}>
-          Преподают ведущие практикующие психологи и психотерапевты России{' '}
+          Преподают ведущие практикующие психологи и психотерапевты {' '}
           <span className={stls.highlight}>с опытом от 7 до 25 лет</span>
         </p>
         <div className={stls.teachers}>

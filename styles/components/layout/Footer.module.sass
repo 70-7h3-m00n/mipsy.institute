@@ -6,9 +6,10 @@
   position: relative
   @include m.dye(bg, c.$tau)
   @include m.dye(c, c.$upsilon)
-  & > *
-    display: flex
-
+  // & > *
+  //   display: flex
+  //   justify-content: space-between
+  //   width: 100%
 .left
   @include m.gap($pt: f.px(50))
   @include m.media(laptop, desktop)

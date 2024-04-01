@@ -30,13 +30,13 @@ const Header = () => {
         {/* <div className={stls.top}> */}
           {router.route === '/' ? (
             <div className={stls.top}>
-            <div className={stls.topleft}>
+            {/* <div className={stls.topleft}>
             <Link href={routes.front.legal}>
               <a className={stls.linkInfo}>
                 Сведения об образовательной организации
               </a>
             </Link>
-          </div>
+          </div> */}
           </div>
           ) : (
             ''
@@ -49,7 +49,7 @@ const Header = () => {
             <BtnHumburger />
           </div>
           <div className={stls.btnFields}>
-            <BtnFields />
+            {/* <BtnFields /> */}
           </div>
           <SearchProgramsDropDown />
           <IconsDropDown />
