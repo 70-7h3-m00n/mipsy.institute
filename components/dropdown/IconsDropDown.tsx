@@ -46,10 +46,10 @@ const partCookie = getCookie('utm')
             onMouseEnter={() => handleIconClick('icon3')}
             className={selectedIcon === 'icon3' ? stls.selected : ''}
           />
-          <IconDropDownDocuments
+          {/* <IconDropDownDocuments
             onMouseEnter={() => handleIconClick('icon2')}
             className={selectedIcon === 'icon2' ? stls.selected : ''}
-          />
+          /> */}
           
           {/* <IconWeakVision
             onMouseEnter={() => handleIconClick('icon4')}

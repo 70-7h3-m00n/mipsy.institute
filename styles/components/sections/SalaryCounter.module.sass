@@ -1,0 +1,210 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+
+
+.content
+  display: flex
+  width: 100%
+  flex-direction: row
+  
+  @include m.media(phone, tablet)
+    flex-direction: column
+
+.title
+  @include m.gap($mt: f.px(30))
+  max-width: f.px(855)
+  display: inline-block
+  position: relative
+  font-size: f.px(44)
+  font-weight: 500
+  transform-style: preserve-3d
+  @include m.media(phone, tablet)
+    font-size: f.px(30)
+    max-width: f.px(325)
+    @include m.gap($mt: f.px(0))
+  &:after
+    position: absolute
+    content: ''
+    transform: translateZ(-1px)
+    border: f.px(5) solid #F87E1B
+    width: 61.5%
+    right: 0
+    bottom: f.px(5)
+    
+    @include m.media(phone, tablet)
+      display: none
+  &::before
+    content: 'Доход'
+    position: absolute
+    right: f.px(-140)
+    top: f.px(10)
+    font-size: f.px(16)
+    background: #F87E1B
+    color: white
+    @include m.gap($ptb: f.px(8), $plr: f.px(23))
+    border-radius: f.px(50)
+    font-weight: 350
+    @include m.media(phone, tablet)
+      top: f.px(0)
+      right: 0
+      font-size: f.px(12)
+      // display: none
+
+.checkSalaryText
+  font-size: f.px(25)
+  font-weight: 350
+
+
+.subtitle
+  font-size: f.px(20)
+  font-weight: 500
+  @include m.media(phone, tablet)
+    font-size: f.px(12)
+  &:first-of-type
+    @include m.gap($mt: f.px(32))
+    @include m.media(phone, tablet)
+      @include m.gap($mt: f.px(23))
+
+.calculatorContainer
+  max-height: f.px(610)
+  border-radius: f.px(80) 0 0 0
+  flex: 0 0 72%
+  background: linear-gradient(180deg, #FCF8FF 0%, #C7B9FF 131.61%)
+  @include m.gap($mr: f.px(30))
+  @include m.media(phone, tablet)
+    border-radius: f.px(20) 0 0 0
+    @include m.gap($mr: f.px(0))
+
+.innerContainer
+  @include m.gap($plr: f.px(10))
+  max-width: f.px(750)
+  margin: 0 auto
+  @include m.media(phone, tablet)
+    @include m.gap($plr: f.px(25))
+  
+
+.calcFooter
+  display: flex
+  justify-content: space-between
+  @include m.gap($mt: f.px(0), $mb: f.px(35))
+  @include m.media(phone, tablet)
+    @include m.gap($mtb: f.px(20))
+  p
+    font-weight: 500
+  .footerText
+    font-size: f.px(25)
+    max-width: f.px(430)
+    @include m.media(phone, tablet)
+      font-size: f.px(12)
+      max-width: f.px(160)
+  .fullSalary
+    font-size: f.px(35)
+    @include m.media(phone, tablet)
+      font-size: f.px(15)
+
+
+.minmax
+  display: flex
+  justify-content: space-between
+  @include m.gap($mt: f.px(13))
+  font-size: f.px(18)
+  font-weight: 350
+.range
+  // flex: 0 0 80%
+  width: 100%
+  height: f.px(3)
+  border-radius: f.px(5)
+  background: #6F01C6
+  -webkit-appearance: none
+  cursor: pointer
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    background: white
+    border: 1px solid #6F01C6
+    border-radius: 50%
+    height: f.px(30)
+    width: f.px(30)
+    cursor: pointer
+    @include m.media(phone, tablet)
+      height: f.px(11)
+      width: f.px(11)
+
+.value
+  border: 1px solid #6F01C6
+  background: none
+  width: 100%
+  border-bottom: none
+  font-weight: 700
+  font-size: f.px(18)
+  margin-bottom: f.px(-12)
+  @include m.gap($mb: f.px(-12), $ptb: f.px(19), $pl: f.px(30))
+  &:focus
+    border: 1px solid #6F01C6
+    border-bottom: none
+  @include m.media(phone, tablet)
+    @include m.gap($ptb: f.px(12), $pl: f.px(12))
+
+.cards
+  max-height: f.px(610)
+  overflow: hidden
+  flex: 1 1 auto
+  background: linear-gradient(180deg, #FCF8FF 0%, #C7B9FF 131.61%)
+  @include m.media(phone, tablet)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    @include m.gap($mt: f.px(10))
+    min-height: f.px(170)
+.cardOne, .cardTwo
+  min-width: f.px(270)
+  position: relative
+  border: f.px(2) solid #6F01C6
+  font-size: f.px(23)
+  @include m.gap($pt: f.px(103), $pb: f.px(72), $mt: f.px(-40))
+  border-radius: f.px(12)
+  background: linear-gradient(181deg, #FFF 0.66%, #D3C7FF 188.31%)
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(47), $pb: f.px(2), $mt: f.px(0))
+    font-size: f.px(11)
+    min-width: f.px(140)
+    max-width: f.px(140)
+    max-height: f.px(135)
+  &::before
+    position: absolute
+    content: '01'
+    top: f.px(20)
+    left: f.px(17)
+    @include m.gap($p: f.px(12))
+    background: #7104C4
+    color: white
+    border-radius: f.px(50)
+    font-size: f.px(25)
+    font-weight: 350
+    @include m.media(phone, tablet)
+      font-size: f.px(11)
+      top: f.px(10)
+      left: f.px(10)
+      @include m.gap($p: f.px(6))
+  p
+    text-align: center
+    @include m.media(phone, tablet)
+      margin-bottom: 0
+      line-height: 130%
+
+.cardOne
+  transform: rotate(-26.82deg)
+
+.cardTwo
+  @include m.gap( $mt: f.px(115))
+  transform: translateX(10px)
+  @include m.media(phone, tablet)
+    @include m.gap( $mt: f.px(40))
+  transform: rotate(43.82deg)
+  &::before
+    content: '02'
+
+  p
+    max-width: f.px(220)
+    margin: 0 auto
+  
+  

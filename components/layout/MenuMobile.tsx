@@ -48,7 +48,7 @@ const MenuMobile = () => {
       })}>
       <Wrapper>
         <div className={stls.row}>
-          <Logo atHeader />
+          <Logo atHeader/>
           <BtnClose />
         </div>
         <nav className={stls.nav}>

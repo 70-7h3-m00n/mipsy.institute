@@ -1,0 +1,103 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.section
+  @include m.gap($pb: f.px(0))
+  @include m.media(phone, tablet)
+    @include m.gap($pb: f.px(50))
+
+.content
+  background: #FBF4FF
+  border-radius: f.px(20)
+  display: flex
+  @include m.media(phone, tablet)
+    flex-direction: column
+
+.title
+  font-size: f.px(44)
+  font-style: normal
+  font-weight: 500
+  max-width: f.px(470)
+  @include m.gap($mt: f.px(90), $mb: f.px(30))
+  @include m.media(phone, tablet)
+    display: none
+.textContainer
+  flex: 0 0 52%
+  overflow: hidden
+
+.textblock
+  text-align: center
+  max-width: f.px(470)
+  margin: 0 auto
+
+.students
+  font-size: f.px(34)
+  font-weight: 500
+  position: relative
+  transform-style: preserve-3d
+  max-width: f.px(410)
+  margin: 0 auto
+  @include m.media(phone, tablet)
+    font-size: f.px(30)
+    max-width: f.px(240)
+  &::after
+    content: ''
+    transform: translateZ(-1px)
+    border: f.px(6) solid #F87E1B
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    @include m.media(phone, tablet)
+      bottom: f.px(36)
+
+.program
+  font-size: f.px(18)
+  font-weight: 500
+  @include m.gap($mt: f.px(11))
+  @include m.media(phone, tablet)
+    font-size: f.px(16)
+
+.portal
+  font-size: f.px(14)
+  color: #808080
+  @include m.gap($mt: f.px(121), $mb: f.px(78))
+  @include m.media(phone, tablet)
+    font-size: f.px(10)
+    max-width: f.px(260)
+    margin: 0 auto
+    @include m.gap($ptb: f.px(33))
+
+.reviews
+  flex: 1 1 auto
+  max-width: f.px(540)
+  background: #6F01C6
+  border-radius: f.px(15)
+  margin: f.px(10)
+  .reviewsSubtitle
+    color: white
+    text-align: center
+    max-width: f.px(450)
+    margin: 0 auto
+    @include m.gap($ptb: f.px(56))
+    font-size: f.px(18)
+
+.mySwiper
+  height: f.px(350)
+  @include m.gap($pl: f.px(71), $ml: f.px(10))
+  @include m.media(phone, tablet)
+    @include m.gap($plr: f.px(13), $ml: f.px(0))
+    height: f.px(350)
+
+.slide
+  background: #FBF4FF
+  @include m.gap( $mb: f.px(30))
+  height: f.px(250)
+  border-radius: f.px(10)
+
+.prevBtn
+  width: 10px
+  height: 10px
+  background: red
+  z-index: 100000

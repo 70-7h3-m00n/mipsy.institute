@@ -13,7 +13,7 @@ SwiperCore.use([Navigation, Pagination])
 
 const SwiperContainer = ({
   teachers = false,
-  topCourses=false,
+  topCourses = false,
   diplomas = false,
   reviews = false,
   reviewNextBtn = false,
@@ -25,12 +25,16 @@ const SwiperContainer = ({
   desktopOptions = { slidesNum: 2, spaceBetween: 50 },
   alwaysDisabledOnDesktop = false,
   isMultiRow = false,
-  autoHeight=false
+  autoHeight = false,
+  hideNavigation = false
 }) => {
-  const isMobileLayout = useBetterMediaQuery( '(max-width: 480px)')
-  const isTabletLayout = useBetterMediaQuery( '(min-width: 481px) and (max-width: 768px)'
+  const isMobileLayout = useBetterMediaQuery('(max-width: 480px)')
+  const isTabletLayout = useBetterMediaQuery(
+    '(min-width: 481px) and (max-width: 768px)'
   )
-  const isLaptopLayout = useBetterMediaQuery('(min-width: 768px) and (max-width: 1200px)')
+  const isLaptopLayout = useBetterMediaQuery(
+    '(min-width: 768px) and (max-width: 1200px)'
+  )
   const isDesktopLayout = useBetterMediaQuery('(min-width: 1201px)')
 
   const layouts = [
@@ -86,14 +90,14 @@ const SwiperContainer = ({
 
     return swiperOptions[currentLayoutKey].spaceBetween
   }
-  
+
   return (
     <Swiper
       navigation={{
         prevEl: '.custom-prev-button',
-        nextEl: '.custom-next-button',
+        nextEl: '.custom-next-button'
       }}
-      loop={slides?.length > 1 ? true : false}
+      
       speed={250}
       enabled={checkIfSwiperEnabled()}
       spaceBetween={getSpaceBetween()}
@@ -104,13 +108,17 @@ const SwiperContainer = ({
         fill: !isMobileLayout ? 'row' : 'column'
       }}
       autoHeight={autoHeight}
-      pagination={(isMobileLayout || isTabletLayout) && !topCourses ? { clickable: true, dynamicBullets: true } : false}
+      pagination={
+        (isMobileLayout || isTabletLayout) && !topCourses && !hideNavigation
+          ? { clickable: true, dynamicBullets: true }
+          : false
+      }
       className={classNames({
         [stls.container]: true,
         [stls.teachers]: teachers,
         [stls.diplomas]: diplomas,
         [stls.reviews]: reviews,
-        [stls.topCourses]: topCourses,
+        [stls.topCourses]: topCourses
       })}>
       {slides &&
         slides.map((slide, idx) => (
@@ -124,16 +132,17 @@ const SwiperContainer = ({
             )}
           </SwiperSlide>
         ))}
-        
-          <div className="custom-prev-button-container">
-        <CustomPrevButton reviewPrevBtn={reviewPrevBtn}
-          />
-      </div>
-        <div className="custom-next-button-container">
-        <CustomNextButton reviewNextBtn={reviewNextBtn}
-          />
-      </div> 
-        
+
+      {!hideNavigation && (
+        <>
+          <div className='custom-prev-button-container'>
+            <CustomPrevButton reviewPrevBtn={reviewPrevBtn} />
+          </div>
+          <div className='custom-next-button-container'>
+            <CustomNextButton reviewNextBtn={reviewNextBtn} />
+          </div>
+        </>
+      )}
     </Swiper>
   )
 }

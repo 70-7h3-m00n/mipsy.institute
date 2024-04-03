@@ -37,7 +37,7 @@ const Hero = () => {
           <div className={stls.left}>
             <h1 className={stls.title}>Онлайн-институт психологии</h1>
             <p className={stls.desc}>
-            Освойте востребованную профессию психолога или повысьте квалификацию вместе с МИПСИ
+            Освойте востребованную профессию психолога или повысьте квалификацию вместе с МИП
             </p>
             <div className={stls.btns}>
               <div className={stls.btn}>

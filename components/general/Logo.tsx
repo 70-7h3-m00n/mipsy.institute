@@ -17,7 +17,6 @@ const Logo = ({ atHeader = false, withTitle = true, atFooter=false }) => {
           <IconLogo withTitle={withTitle} atFooter={atFooter} />
           {withTitle && (
             <p className={stls.title}>
-              Московский <br />
               Институт <br />
               Психологии
             </p>
