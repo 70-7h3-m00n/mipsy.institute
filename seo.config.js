@@ -5,7 +5,7 @@ const seo = {
     type: 'website',
     locale: 'ru',
     url: 'https://mipsy.institute',
-    site_name: 'MIPSY'
+    site_name: 'MIP'
   },
   // twitter: {
   //   handle: '@handle',

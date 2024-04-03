@@ -1,0 +1,80 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  background: linear-gradient(180deg, #FDF8FF 0%, #D4C8FF 100%)
+  @include m.flex($fd: column, $jc: space-between)
+
+.questionTitle
+  font-size: f.px(30)
+  font-style: normal
+  font-weight: 500
+  line-height: 130%
+  @include m.gap($mt: f.px(70))
+  color: #947AFF
+  @include m.media(phone, tablet)
+    @include m.gap($mt: f.px(50))
+    font-size: f.px(18)
+
+.card
+  display: flex
+  gap: f.px(10)
+
+.leftBlock
+  @include m.flex($fd: column, $jc: space-between)
+  gap: f.px(20)
+
+.rightBlock
+  @include m.flex($fd: column, $jc: space-between)
+
+.answer
+
+.radio
+  width: f.px(30)
+  height: f.px(30)
+  background: #947AFF !important
+  cursor: pointer
+  @include m.gap($mr: f.px(30))
+  border: 1px solid red
+  &:checked
+    accent-color: #947AFF
+  @include m.media(phone, tablet)
+    height: f.px(20)
+
+.label
+  font-size: f.px(20)
+  font-style: normal
+  font-weight: 500
+  line-height: 130%
+  cursor: pointer
+    
+  @include m.media(phone, tablet)
+    font-size: f.px(14)
+
+.btn
+  position: relative
+  display: flex
+  justify-content: flex-start
+  z-index: 1000
+
+.inputAndQuestion
+  display: flex
+  align-items: center
+  background: #947AFF
+  color: white
+  @include m.gap($ptb: f.px(10), $plr: f.px(30))
+  border-radius: f.px(10)
+  border: f.px(4) solid #D4C8FF
+
+.radioQuiz
+  width: f.px(20)
+  height: f.px(20)
+  background: #947AFF !important
+  cursor: pointer
+  @include m.gap($mr: f.px(20))
+  border: 1px solid red
+  &:checked
+    accent-color: #947AFF
+  @include m.media(phone, tablet)
+    height: f.px(20)

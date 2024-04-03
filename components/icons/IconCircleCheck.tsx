@@ -1,8 +1,14 @@
 import stls from '@/styles/components/icons/IconCircleCheck.module.sass'
 import classNames from 'classnames'
 
-const IconCircleCheck = ({ calpha = false, inverse = false, violetRound=false, violetItems=false, 
-onMain=false}) => {
+const IconCircleCheck = ({
+  calpha = false,
+  inverse = false,
+  violetRound = false,
+  violetItems = false,
+  onMain = false,
+  distanceSection = false
+}) => {
   return (
     <span
       className={classNames({
@@ -11,9 +17,13 @@ onMain=false}) => {
         [stls.inverse]: inverse,
         [stls.violetRound]: violetRound,
         [stls.violetItems]: violetItems,
-        [stls.onMain]: onMain
+        [stls.onMain]: onMain,
+        [stls.distanceItem]: distanceSection
       })}>
-      <svg viewBox='-1 -0.5 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg
+        viewBox='-1 -0.5 22 22'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'>
         <title>Галочка</title>
         <path
           d='M8.10815 10.2701L9.45951 11.6214L12.4325 8.64844'

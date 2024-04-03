@@ -9,7 +9,7 @@
   right: 0
   z-index: 3
   @include m.media(phone, tablet)
-    z-index: 0
+    // z-index: 0
     top: -100px
   & > *
     & > *
@@ -38,9 +38,61 @@
             transition: stroke 0.5s ease
             stroke: #6F01C6
             @include m.media(phone, tablet)
-                display: none
+                // display: none
     &:hover
       
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #6F01C6
+              stroke: white
+
+  &.teachersNextBtn
+      transition: stroke 2s ease
+      top: 10px
+      right: 20px
+      @include m.media(phone, tablet)
+        top: 90%
+        right: 5%
+      & > *
+        & > *
+          & > *
+            & > *
+              transition: stroke 0.5s ease
+              stroke: #FBF4FF
+              fill: #6F01C6
+              @include m.media(phone, tablet)
+                  // display: none
+      &:hover
+        
+        & > *
+          & > *
+            & > *
+              & > *
+                fill: #6F01C6
+                stroke: white
+
+  &.happyStudentsNextBtn
+    transition: stroke 2s ease
+    position: absolute
+    top: f.px(260)
+    right: f.px(370)
+    // transform: translate(f.px(20), f.px(140))
+    // float: left
+    @include m.media(phone, tablet)
+      top: f.px(260)
+      right: f.px(110)
+    & > *
+      & > *
+        & > *
+          & > *
+            transition: stroke 0.5s ease
+            stroke: #6F01C6
+            fill: #FBF4FF
+            @include m.media(phone, tablet)
+                // display: none
+    &:hover
       & > *
         & > *
           & > *
@@ -54,7 +106,7 @@
   right: 50px
   z-index: 3
   @include m.media(phone, tablet)
-    z-index: 0
+    // z-index: 0
     top: -100px
   & > *
     & > *
@@ -82,7 +134,55 @@
             transition: stroke 0.5s ease
             stroke: #6F01C6
             @include m.media(phone, tablet)
-              display: none
+              // display: none
+    &:hover
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #6F01C6
+              stroke: white
+
+  &.teachersPrevBtn
+    top: 10px
+    right: 70px 
+    @include m.media(phone, tablet)
+      top: 90%
+      left: 10%
+    & > *
+      & > *
+        & > *
+          & > *
+            transition: stroke 0.5s ease
+            stroke: #FBF4FF
+            fill: #6F01C6
+            @include m.media(phone, tablet)
+              // display: none
+    &:hover
+      & > *
+        & > *
+          & > *
+            & > *
+              fill: #6F01C6
+              stroke: white
+  
+  &.happyStudentsPrevBtn
+    @include m.media(laptop, desktop)
+      top: f.px(260)
+      right: f.px(420)
+    @include m.media(phone, tablet)
+      top: f.px(260)
+      left: f.px(120)
+      // transform: translate(f.px(20), f.px(40))
+    & > *
+      & > *
+        & > *
+          & > *
+            transition: stroke 0.5s ease
+            stroke: #6F01C6
+            fill: #FBF4FF
+            @include m.media(phone, tablet)
+              // display: none
     &:hover
       & > *
         & > *

@@ -1,0 +1,44 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.item
+  cursor: pointer
+  text-align: start
+  height: f.px(155)
+  border-radius: f.px(25)
+  @include m.flex($jc: flex-start, $ai: flex-start, $fd: column)
+  border: 1px solid
+  @include m.dye(border, c.$alpha)
+  @include m.media(phone, tablet)
+    @include m.gap($p:f.px(12))
+    border: 0.7px solid
+    @include m.dye(border, c.$alpha)
+    & > *
+      max-width: f.px(420)
+
+  @include m.media(laptop, desktop)
+    @include m.gap($ptb:f.px(15), $pl: f.px(15), $pr: f.px(15))
+
+.description
+  @include m.gap($pt: f.px(20),$pl: f.px(10))
+  @include m.media(laptop, desktop, tablet)
+    max-width: f.px(300)
+
+.p
+  font-weight: 400
+  font-size: f.px(16)
+  @include m.dye(c, c.$chi)
+  @include m.gap($mb: 0)
+  @include m.media(phone, tablet)
+    font-size: f.px(15) !important
+
+.purpleBlock
+  @include m.dye(bg, c.$alpha)
+  & > div > span
+    @include m.dye(c, c.$nu)
+  & > span
+    & path
+      stroke: #fff !important
+    & rect
+      stroke: #fff !important
