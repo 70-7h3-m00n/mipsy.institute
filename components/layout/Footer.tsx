@@ -194,31 +194,37 @@ const Footer = () => {
             <div className={stls.leaveApp}>
                 <PopupTrigger btn='alpha' cta='submitApplication' />
               </div>
-            {/* <div className={stls.newRight}>
-              <div className={stls.leaveApp}>
+            <div className={stls.newRight}>
+              {/* <div className={stls.leaveApp}>
                 <PopupTrigger btn='alpha' cta='submitApplication' />
-              </div>
-              <a href='https://lms.mip.institute/' className={stls.enterToPortal}>Вход</a>
-              <SearchProgram />
-              <p className={stls.primary}>
+              </div> */}
+              {/* <a href='https://lms.mip.institute/' className={stls.enterToPortal}>Вход</a>
+              <SearchProgram /> */}
+              {/* <p className={stls.primary}>
                 Государственный контроль (надзор) в сфере образования:
                 <span>
                   Департамент образования и науки города Москвы Федеральная
                   служба по надзору в сфере образования и науки
                 </span>
-              </p>
+              </p> */}
               
-              <p className={stls.primary}>
+              {/* <p className={stls.primary}>
                 Научная автономная некоммерческая организация «Московский институт
                 психологии» (НАНО «МИП»)
                 ИНН 9725041321 ОГРН 1207700479260 Лицензия департамента
                 образования города Москвы на осуществление образовательной
                 деятельности №041363 от 14.04.21.
-              </p>
-              <a className={stls.linkToLicense} href={routes.external.license} target='_blank'  rel="noreferrer nofollow noindex" >
+              </p> */}
+              {/* <a className={stls.linkToLicense} href={routes.external.license} target='_blank'  rel="noreferrer nofollow noindex" >
                 Лицензия на образовательную деятельность №041363 от 14.04.2021 г.
+              </a> */}
+              <a  className={stls.linkToLicense} href={routes.front.policiesPrivacy} target='_blank'  rel="noreferrer nofollow noindex" >
+                Политика конфиденциальности
               </a>
-            </div> */}
+              <a className={stls.linkToLicense} href={routes.front.moneyRefund} target='_blank'  rel="noreferrer nofollow noindex" >
+                Возврат денежных средств
+              </a>
+            </div>
           </div>
           {/* <div className={stls.bottom}>
             <FooterBottom />

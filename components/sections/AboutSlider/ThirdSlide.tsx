@@ -8,7 +8,7 @@ const ThirdSlide = () => {
   return (
     <div className={stls.container}>
       
-      <p className={stls.first}><span className={stls.bold}>МИПСИ</span> — это команда практикующих экспертов, отзывчивых кураторов и наставников, которые будут сопровождать вас от начала до конца и обеспечат старт вашей успешной карьеры.</p>
+      <p className={stls.first}><span className={stls.bold}>МИП</span> — это команда практикующих экспертов, отзывчивых кураторов и наставников, которые будут сопровождать вас от начала до конца и обеспечат старт вашей успешной карьеры.</p>
       <div className={stls.filterImg}>
 
       

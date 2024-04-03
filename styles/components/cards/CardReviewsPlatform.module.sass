@@ -1,0 +1,31 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.contentSlide
+  @include m.gap($plr: f.px(30), $ptb: f.px(10))
+  & > *
+    & > *
+      & > *
+        background: #FBF4FF
+        @include m.gap( $ptb: f.px(10))
+
+.rating
+  font-size: f.px(8)
+  color: #6F01C6
+  font-weight: 500
+
+.ratingNum
+  font-size: f.px(48)
+  @include m.gap( $mb: f.px(10))
+  font-style: italic
+  font-weight: 500
+
+.quantity
+  text-align: center
+  @include m.gap( $mb: f.px(32))
+
+.ratingWithStar
+  display: flex
+  justify-content: center
+  align-items: baseline

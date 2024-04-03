@@ -13,7 +13,7 @@ const FirstSlide = () => {
         <TagWhite>Онлайн-институт</TagWhite>
       </div>
       <div className={stls.tagOrange}>
-        <TagOrange>МИПСИ</TagOrange>
+        <TagOrange>МИП</TagOrange>
       </div>
       <h2 className={stls.title}>Об институте</h2>
       <p className={stls.first}>Мы за современный подход в образовании.</p>

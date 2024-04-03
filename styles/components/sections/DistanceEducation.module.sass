@@ -1,0 +1,78 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  z-index: 1
+  @include m.media(phone, tablet)
+    @include m.gap($pt: f.px(0), $pb: f.px(50))
+  @include m.media(laptop, desktop)
+    @include m.gap($pt: f.px(0), $pb: f.px(100))
+  @include m.dye(bg, c.$nu)
+
+.title
+  display: block
+  max-width: f.px(700)
+  @include m.dye(c, c.$theta)
+  @include m.media(laptop, desktop)
+    @include m.gap($mb: f.px(35))
+    font-size: f.px(44)
+    font-weight: 500
+  @include m.media(phone, tablet)
+    @include m.gap($mb: f.px(20))
+    font-size: f.px(26)
+  @include m.media(phone)
+    max-width: f.px(300)
+
+.orangeBlock
+  z-index: 2
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  @include m.dye(bg, c.$beta)
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  animation: 3s infinite normal slideDesktop
+  @include m.media(laptop)
+    animation: 3s infinite normal slideLaptop
+  @include m.media(tablet)
+    animation: 3s infinite normal slideTablet
+  @include m.media(phone)
+    animation: 3s infinite normal slidePhone
+
+
+@keyframes slidePhone
+  0% 
+    transform: translate(f.px(250), f.px(-30))
+  50%
+    transform: translate(f.px(200), f.px(-30))
+  100% 
+    transform: translate(f.px(250), f.px(-30))
+
+@keyframes slideTablet
+  0% 
+    transform: translate(f.px(300), f.px(-30))
+  50%
+    transform: translate(f.px(250), f.px(-30))
+  100% 
+    transform: translate(f.px(300), f.px(-30))
+
+@keyframes slideLaptop
+  0% 
+    transform: translate(f.px(520), f.px(-30))
+  50%
+    transform: translate(f.px(480), f.px(-30))
+  100% 
+    transform: translate(f.px(520), f.px(-30))
+
+@keyframes slideDesktop
+  0% 
+    transform: translate(f.px(675), f.px(-30))
+  50%
+    transform: translate(f.px(640), f.px(-30))
+  100% 
+    transform: translate(f.px(675), f.px(-30))
+

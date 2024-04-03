@@ -40,7 +40,8 @@ const routes = {
     docsGeneral: '/docs/general',
     assetsImgsIconsManifestIcon512: '/assets/imgs/icons/manifest-icon-512.png',
     policiesPrivacy: '/policies/privacy.pdf',
-    policiesTerms: '/policies/terms.pdf'
+    policiesTerms: '/policies/terms.pdf',
+    moneyRefund: '/policies/moneyRefund.pdf'
   },
   back: {
     // root: dev ? 'http://localhost:1337' : 'https://api.mip.institute',

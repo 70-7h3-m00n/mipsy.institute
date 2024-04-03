@@ -5,8 +5,6 @@
 .container
   @include m.sizeIcon($w: 20, $h: 20)
   @include m.flex
-  
-  // @include m.gap($m: f.px(10, em))
 
   &.calpha
     border-radius: 50%
@@ -38,20 +36,20 @@
         @include m.dye(stroke, #6F01C6)
       & rect
         @include m.dye(stroke, #6F01C6)
-    
+
   &.violetItems
     @include m.sizeIcon($w: 40, $h: 40)
     @include m.media(phone, tablet)
       @include m.sizeIcon($w: 27, $h: 27)
-    padding-top: 0
-    border-radius: 50%
+      padding-top: 0
+      border-radius: 50%
     @include m.dye(bg, #FBF4FF)
     & path
       @include m.dye(stroke, #6F01C6)
       stroke-width: f.px(0.8)
     & rect
       @include m.dye(stroke, #6F01C6)
-  
+
   &.onMain
     @include m.sizeIcon($w: 45, $h: 45)
     border-radius: 50%
@@ -67,5 +65,16 @@
         stroke-width: f.px(0.5)
       @include m.dye(stroke, #6F01C6)
 
-  // & path, & rect
-  //   @include m.dye(stroke, c.$beta)
+  &.distanceItem
+    @include m.sizeIcon($w: 25, $h: 25)
+    @include m.media(phone, tablet)
+      @include m.sizeIcon($w: 20, $h: 20)
+    @include m.dye(bg, transparent)
+    & path
+      @include m.dye(stroke, #6F01C6)
+      @include m.media(phone, tablet)
+    & rect
+      @include m.dye(stroke, #6F01C6)
+      stroke-width: f.px(0.9)
+      @include m.media(phone, tablet)
+        stroke-width: f.px(0.9)
