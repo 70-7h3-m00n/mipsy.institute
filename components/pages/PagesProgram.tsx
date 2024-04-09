@@ -47,7 +47,6 @@ type PagesProgramType = {
 
 const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, slug }: PagesProgramType) => {
   const processRef = useRef(null)
-  const diplomaRef = useRef(null)
   const planRef = useRef(null)
   const teachersRef = useRef(null)
   const resumeRef = useRef(null)
@@ -89,7 +88,6 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
       <PageNavigation 
       ofType={ofType}
       processRef={processRef} 
-      diplomaRef={diplomaRef}
       planRef={planRef}
       teachersRef={teachersRef}
       resumeRef={resumeRef}
@@ -113,7 +111,7 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
       </>
       )}
       <HowProcessGoes processRef={processRef} list={ofType === 'course'? listOnCourses : list} subtitle={subtitle} />
-      <YourDiploma diplomaRef={diplomaRef} ofType={ofType} />
+      {/* <YourDiploma diplomaRef={diplomaRef} ofType={ofType} /> */}
       <BriefProgramContents planRef={planRef} />
       <FullProgram />
       <Teachers teachersRef={teachersRef} title={'Преподаватели программы'} />
