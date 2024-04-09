@@ -15,7 +15,8 @@ const ProgramCost = ({ withPerMonth = false }) => {
   const rprice =
     Math.round(Math.ceil((price / (100 - discount)) * 100) / 1000) * 1000
 
-  const perMonthPrice = Math.round(Math.round(price && +price / 12) / 100) * 100
+  const perMonthPrice = Math.round(price && +price / 12)
+  console.log(perMonthPrice, price)
   const perMonthPriceRegular =
     Math.round(Math.round(rprice && +rprice / 12) / 100) * 100
 
@@ -31,16 +32,9 @@ const ProgramCost = ({ withPerMonth = false }) => {
             <span className={stls.bold}>
               {toNumberWithSpaces(perMonthPrice)}
             </span>{' '}
-            <span className={stls.bold}>&#8381;/мес</span>
+            <span className={stls.bold}>$/мес</span>
           </span>
-          
-          {/* <span className={stls.regular}>
-            <span className={stls.bold}>
-              {toNumberWithSpaces(perMonthPriceRegular)}
-            </span>{' '}
-            <span className={stls.light}>&#8381;</span>
-          </span> */}
-          {/* </div> */}
+
           <p className={stls.loan}>*Беспроцентная рассрочка на 12 месяцев от TINKOFF</p>
           </div>
           <div className={stls.spanLine}>
@@ -50,13 +44,13 @@ const ProgramCost = ({ withPerMonth = false }) => {
             <span className={stls.full}>
               {toNumberWithSpaces(price)}
             </span>{' '}
-            <span className={stls.fullLight}>&#8381;</span>
+            <span className={stls.fullLight}>$</span>
           </span>{' '}
           <span className={stls.regular}>
             <span className={stls.bold}>
               {toNumberWithSpaces(rprice)}
             </span>{' '}
-            <span className={stls.light}>&#8381;</span>
+            <span className={stls.light}>$</span>
           </span>
           </div>
           </div>

@@ -26,6 +26,7 @@ import PopupFooterReviews from '../popups/PopupFooterReviews'
 
 const Footer = () => {
   const { studyFields } = useContext(ContextStaticProps)
+  console.log(studyFields)
 
   const staticLinks = [
     {
@@ -40,22 +41,22 @@ const Footer = () => {
     //   val: 'Вебинары',
     //   href: routes.front.webinars
     // },
-    {
-      val: 'Преподаватели',
-      href: routes.front.teachers
-    },
-    {
-      val: 'Отзывы',
-      href: routes.front.reviews
-    },
+    // {
+    //   val: 'Преподаватели',
+    //   href: routes.front.teachers
+    // },
+    // {
+    //   val: 'Отзывы',
+    //   href: routes.front.reviews
+    // },
     {
       val: 'Главная',
       href: routes.front.home
     },
-    {
-      val: 'Об институте',
-      href: routes.front.about
-    },
+    // {
+    //   val: 'Об институте',
+    //   href: routes.front.about
+    // },
     // {
     //   val: 'Сведения об образовательной организации',
     //   href: routes.front.legal
@@ -64,10 +65,10 @@ const Footer = () => {
       val: 'Контакты',
       href: routes.front.contact
     },
-    {
-      val: 'Оплата',
-      href: routes.front.payment
-    }
+    // {
+    //   val: 'Оплата',
+    //   href: routes.front.payment
+    // }
   ]
 
   const fieldsLinks = []

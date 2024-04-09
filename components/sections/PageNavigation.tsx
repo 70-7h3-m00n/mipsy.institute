@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import stls from '@/styles/components/sections/PageNavigation.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
 
-const PageNavigation = ({ofType = null,processRef, diplomaRef, planRef, teachersRef, costRef, reviewsRef, resumeRef, faqRef}) => {
+const PageNavigation = ({ofType = null,processRef, planRef, teachersRef, costRef, reviewsRef, resumeRef, faqRef}) => {
   const [activeSection, setActiveSection] = useState('')
   const navigationRef = useRef(null)
   const pointRef = useRef(null)
@@ -11,7 +11,6 @@ const PageNavigation = ({ofType = null,processRef, diplomaRef, planRef, teachers
 
   const sectionRefs = {
     process: processRef,
-    diploma: diplomaRef,
     plan: planRef,
     teachers: teachersRef,
     resume: resumeRef,
@@ -62,13 +61,6 @@ const PageNavigation = ({ofType = null,processRef, diplomaRef, planRef, teachers
                 className={activeSection === 'process' ? stls.active : ''}
                 onClick={() => handleScrollToSection('process')}>
                 Процесс обучения
-              </p>
-            </li>
-            <li>
-              <p
-                className={activeSection === 'diploma' ? stls.active : ''}
-                onClick={() => handleScrollToSection('diploma')}>
-                Диплом
               </p>
             </li>
             <li>
@@ -127,13 +119,6 @@ const PageNavigation = ({ofType = null,processRef, diplomaRef, planRef, teachers
                 className={activeSection === 'process' ? stls.active : ''}
                 onClick={() => handleScrollToSection('process')}>
                 Процесс обучения
-              </p>
-            </li>
-            <li>
-              <p
-                className={activeSection === 'diploma' ? stls.active : ''}
-                onClick={() => handleScrollToSection('diploma')}>
-                Диплом
               </p>
             </li>
             <li>

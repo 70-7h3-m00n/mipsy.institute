@@ -10,8 +10,8 @@ const SalaryCounter = () => {
   })
   const [days, setDays] = useState(15)
   const [daysRange, setDaysRange] = useState({ min: 1, max: 31 })
-  const [price, setPrice] = useState(2500)
-  const [priceRange, setPriceRange] = useState({ min: 1500, max: 5000 })
+  const [price, setPrice] = useState(40)
+  const [priceRange, setPriceRange] = useState({ min: 20, max: 60 })
   const overall = (consultation * days * price).toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 2 })
   const [perMonth, setPerMonth] = useState(overall)
 
@@ -81,7 +81,7 @@ const SalaryCounter = () => {
               <input value={price} onChange={priceHandler} className={stls.value}/>
               <input
                 className={stls.range}
-                step={100}
+                step={1}
                 min={priceRange.min}
                 max={priceRange.max}
                 type='range'
@@ -89,21 +89,21 @@ const SalaryCounter = () => {
                 onChange={priceHandler}
               />
               <div className={stls.minmax}>
-                <p>{priceRange.min} ₽</p>
-                <p>{priceRange.max} ₽</p>
+                <p>{priceRange.min} $</p>
+                <p>{priceRange.max} $</p>
               </div>
               <div className={stls.calcFooter}>
                 <p className={stls.footerText}>
                   Вы сможете зарабатывать в месяц на психологических
                   консультациях
                 </p>
-                <p className={stls.fullSalary}>{overall}₽</p>
+                <p className={stls.fullSalary}>{overall}$</p>
               </div>
             </div>
           </div>
           <div className={stls.cards}>
             <div className={stls.cardOne}>
-              <p>*Средняя стоимость консультации выпускников МИП — <br /> 3 000 р./час</p>
+              <p>*Средняя стоимость консультации выпускников МИП — <br /> 40 $/час</p>
             </div>
             <div className={stls.cardTwo}>
               <p>До 5 консультаций в день может проводить психолог</p>
