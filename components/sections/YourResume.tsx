@@ -64,7 +64,7 @@ const YourResume = ({resumeRef=null}) => {
               <div className={stls.heading}>
                 <p className={stls.p}>Зарплата от:</p>
                 <p className={stls.salary}>
-                  {toNumberWithSpaces(program?.entrySalary)}&nbsp;р
+                  {toNumberWithSpaces(program?.entrySalary)}&nbsp;$
                 </p>
               </div>
             </div>

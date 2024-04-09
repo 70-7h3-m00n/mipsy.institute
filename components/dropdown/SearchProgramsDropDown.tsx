@@ -195,7 +195,7 @@ export default function SearchProgramsDropDown() {
           )}
         </div>
       </div> */}
-      <div
+      {/* <div
         className={stls.desriptionPopup}
         onMouseEnter={directionsOnHoverHandler}
         onMouseLeave={directionsOnHoverHandler}>
@@ -221,7 +221,7 @@ export default function SearchProgramsDropDown() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       {/* {!isEdpartners && (
         <a
           href={'tel:+7-499-110-86-32'}

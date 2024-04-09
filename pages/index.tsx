@@ -63,7 +63,7 @@ const HomePage: NextPage<TypePageHomeProps> = ({
   })
 
   const seoParams = {
-    title: `МИП - Московский Институт Психологии`,
+    title: `МИП`,
     desc: truncate(
       'MIP - Психологический онлайн институт. Получи дистанционное образование со скидкой 30% Дипломы ФРДО. Удобный формат обучения! Актуальный материал с упором на практику.',
       120
@@ -148,7 +148,7 @@ const HomePage: NextPage<TypePageHomeProps> = ({
         title={'Преподаватели – наставники'}
         teachersFromMain={teachersFromMain}
       />
-      <YourDiploma onMain ofType='profession' />
+      {/* <YourDiploma onMain ofType='profession' /> */}
       <HappyStudents />
       <Reviews onMain reviews={reviewsSorted} />
       <PayLater />
