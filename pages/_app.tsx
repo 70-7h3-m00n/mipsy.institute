@@ -344,6 +344,21 @@ const MyApp = ({ Component, pageProps, router }) => {
           />
         </div>
       </noscript> */}
+      <Script
+        id='GTM first script'
+        src='https://www.googletagmanager.com/gtag/js?id=G-PVE1C7ZRLM'
+      />
+      <Script
+        id='GTM second script'
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-PVE1C7ZRLM');
+          gtag('config', 'AW-11307234082');`
+        }}
+      />
     </>
   )
 }

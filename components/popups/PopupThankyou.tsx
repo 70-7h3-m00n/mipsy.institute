@@ -4,6 +4,7 @@ import { ContextStaticProps } from '@/context/index'
 import TagManager from 'react-gtm-module'
 import { BtnClose } from '@/components/btns'
 import { v4 as uuidv4 } from 'uuid'
+import Script from 'next/script'
 
 const PopupThankyou = ({ close }) => {
   const { program } = useContext(ContextStaticProps)
@@ -34,6 +35,12 @@ const PopupThankyou = ({ close }) => {
   // }, [])
   return (
     <div className={stls.container}>
+      <Script
+      id='GoogelConversion'
+      dangerouslySetInnerHTML={{
+        
+          __html: `gtag('event', 'conversion', {'send_to': 'AW-11307234082/GWRICObunqUZEKLm2o8q'})`
+        }}/>
       <div className={stls.close}>
         <BtnClose onClick={close} iconCloseCircle />
       </div>

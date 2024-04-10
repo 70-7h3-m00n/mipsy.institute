@@ -8,7 +8,7 @@ const genezis = async values => {
     console.log(values)
     const res = await axios.post(`${routes.front.root}/api/genezis`, values)
 
-    await axios.post(`${routes.front.root}/api/advCakeNew`, values)
+    // await axios.post(`${routes.front.root}/api/advCakeNew`, values)
     
     if (values?.utm?.utm_source === 'admitad') {
       console.log('TO ADMITAD')
