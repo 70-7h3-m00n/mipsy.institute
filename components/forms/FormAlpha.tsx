@@ -112,17 +112,17 @@ const FormAlpha = ({
         const req = await genezis(data)
         // const req = await hitContactRoute(data)
 
-        if (req === 200) {
+        // if (req === 200) {
           setLoading(false)
-          window.open(routes.front.gratefull, '_blank')
+          // window.open(routes.front.gratefull, '_blank')
           setIsIpCheckFailed(false)
           // setIsDisabled(true)
           setThanksIsOpen(true)
-        } else {
-          console.log('err')
-          setLoading(false)
-          setIsIpCheckFailed(true)
-        }
+        // } else {
+        //   console.log('err')
+        //   setLoading(false)
+        //   setIsIpCheckFailed(true)
+        // }
       }
     // } else {
     //   setIsIpCheckFailed(true)
