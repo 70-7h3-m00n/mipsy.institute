@@ -5,13 +5,13 @@ import CardContact from '@/components/cards/CardContact'
 
 const Contacts = () => {
   const cards = [
-    {
-      city: company.addresses.default.city,
-      street: `${company.addresses.default.street.name} ${company.addresses.default.street.type} ${company.addresses.default.street.door}`,
-      numbers: [company.phoneNumbers.default, company.phoneNumbers.defaultAlt],
-      studyDivision: company.phoneNumbers.studyDivision,
-      email: company.emails.default
-    },
+    // {
+    //   city: company.addresses.default.city,
+    //   street: `${company.addresses.default.street.name} ${company.addresses.default.street.type} ${company.addresses.default.street.door}`,
+    //   numbers: [company.phoneNumbers.default, company.phoneNumbers.defaultAlt],
+    //   studyDivision: company.phoneNumbers.studyDivision,
+    //   email: company.emails.default
+    // },
     {
       city: company.addresses.kz.city,
       street: `${company.addresses.kz.street.type} ${company.addresses.kz.street.name} ${company.addresses.kz.street.door}`,
@@ -23,13 +23,13 @@ const Contacts = () => {
     <section className={stls.container}>
       <Wrapper>
         <div className={stls.cards}>
-          {cards.map(({ city, street, numbers, email, studyDivision }) => (
+          {cards.map(({ city, street, numbers, email }) => (
             <div key={`${city} ${street}`} className={stls.card}>
               <CardContact
                 city={city}
                 street={street}
                 numbers={numbers}
-                studyDivision={studyDivision}
+                // studyDivision={studyDivision}
                 email={email}
               />
             </div>
