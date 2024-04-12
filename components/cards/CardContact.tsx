@@ -6,7 +6,7 @@ type CardContactType = {
   city: string
   street: string
   numbers: { href: string; val: string }[]
-  studyDivision: { href: string; val: string; contactType: string }
+  studyDivision?: { href: string; val: string; contactType: string }
   email: { href: string; val: string }
 }
 

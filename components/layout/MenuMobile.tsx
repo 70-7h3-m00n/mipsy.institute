@@ -30,14 +30,14 @@ const MenuMobile = () => {
       href: routes.front.programs,
       withIcon: true
     },
-    { text: 'Преподаватели', href: routes.front.teachers, withIcon: false },
-    { text: 'Отзывы', href: routes.front.reviews, withIcon: false },
+    // { text: 'Преподаватели', href: routes.front.teachers, withIcon: false },
+    // { text: 'Отзывы', href: routes.front.reviews, withIcon: false },
     { text: 'Об институте', href: routes.front.about, withIcon: false },
-    {
-      text: 'Сведения об образовательной организации',
-      href: routes.front.legal,
-      withIcon: false
-    }
+    // {
+    //   text: 'Сведения об образовательной организации',
+    //   href: routes.front.legal,
+    //   withIcon: false
+    // }
   ]
 
   return (
@@ -75,7 +75,7 @@ const MenuMobile = () => {
           
           <PopupTrigger btn='epsilon' cta='callMeBack' />
         </div>
-        <p>Москва, Шаболовка улица 34с2</p>
+        <p>Алматы, Проспект Аль-Фараби 17 блок 4Б офис 1603</p>
         <div className={stls.sm}>
           <BtnVk mlzero />
           <BtnWhatsapp />
