@@ -63,7 +63,7 @@ const AboutPage: NextPage<TypePageTeachersProps> = ({ programs, teachers }) => {
       <WhoIsOurSpeakers />
       <TeachersFiles teachers={teachersSorted} />
       {/* <ChooseProgram /> */}
-      <ActiveLicenses />
+      {/* <ActiveLicenses /> */}
       <AboutPageContactForm />
     </>
   )
