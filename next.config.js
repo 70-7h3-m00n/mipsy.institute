@@ -37,6 +37,15 @@ module.exports = /* withPWA( */ {
         ],
       },
       {
+        source: '/api/genezis',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, OPTIONS, PUT, DELETE' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type' },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+        ],
+      },
+      {
         source: '/api/checkAndCreateLead',
         headers: [
           { key: 'Access-Control-Allow-Origin', value: '*' },
