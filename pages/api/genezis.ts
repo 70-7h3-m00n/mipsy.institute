@@ -19,7 +19,7 @@ const createLead = async (req, res) => {
   } = req.body
 
   // URL для запроса сделки по ID
-  const apiUrl = `https://webhook.gnzs.ru/ext/site-int/amo/29931190?gnzs_token=b6ce2e21-c68e-476f-87fe-ae268db2e9c2`
+  const apiUrl = `https://webhook.gnzs.ru/ext/site-int/amo/29931190?gnzs_token=4f9cbc7c-e70f-45d7-af22-4c324597caf9`
   try {
     const leadsData = {
       form: [
@@ -40,8 +40,8 @@ const createLead = async (req, res) => {
         { key: 'roistat', value: roistat_visit || '' },
         { key: '_ym_uid', value: ymUid || '' }
       ],
-      host: 'mip.institute', // домен вашего сайта (ОБЯЗАТЕЛЬНО)
-      token: 'b6ce2e21-c68e-476f-87fe-ae268db2e9c2'
+      host: 'mipsy.institute', // домен вашего сайта (ОБЯЗАТЕЛЬНО)
+      token: '4f9cbc7c-e70f-45d7-af22-4c324597caf9'
     }
 
     // Выполните GET-запрос к amoCRM API
@@ -53,6 +53,7 @@ const createLead = async (req, res) => {
 
     if (response.status === 200) {
       const leadData = response.data
+      console.log(leadData)
       res.status(200).json({ status: 200, msg: 'Lead created' })
     }
   } catch (error) {

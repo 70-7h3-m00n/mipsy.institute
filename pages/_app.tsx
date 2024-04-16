@@ -245,13 +245,13 @@ const MyApp = ({ Component, pageProps, router }) => {
         </MenuState>
       </ContextStaticProps.Provider>
 
-      {/* <Script src='/assets/js/vendors/swiped-events.min.js' />
-      <Script
+      <Script src='/assets/js/vendors/swiped-events.min.js' />
+      {/* <Script
         type='text/javascript'
         id='advcakeAsync'
         src='/assets/js/vendors/advCake.js'
-      />
-      {prod && (
+      /> */}
+      {/* {prod && ( */}
         <>
           <Script
             id='roistat counter'
@@ -267,10 +267,10 @@ const MyApp = ({ Component, pageProps, router }) => {
             }}
           />
 
-          <Script async src='/assets/js/vendors/roistatWA.js' />
+          {/* <Script async src='/assets/js/vendors/roistatWA.js' /> */}
         </>
-      )}
-
+      {/* )} */}
+{/* 
       <Script
         id='edpartners_scaletrk'
         dangerouslySetInnerHTML={{
@@ -343,7 +343,7 @@ const MyApp = ({ Component, pageProps, router }) => {
             alt='Top.Mail.Ru'
           />
         </div>
-      </noscript> */}
+      </noscript>  */}
       <Script
         id='GTM first script'
         src='https://www.googletagmanager.com/gtag/js?id=G-PVE1C7ZRLM'
