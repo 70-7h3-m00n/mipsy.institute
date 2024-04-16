@@ -4,6 +4,7 @@ import YouTube from 'react-youtube';
 import Wrapper from '../layout/Wrapper';
 import stls from '@/styles/components/sections/YouTubeVideo.module.sass'
 import { IconClock } from '../icons';
+import routes from '@/config/routes';
 
 const YouTubeVideo = ({ videoId }) => {
 
@@ -26,7 +27,8 @@ const YouTubeVideo = ({ videoId }) => {
       <h1 className={stls.title}>Знакомство с институтом</h1>
       <div className={stls.time}>
         <IconClock colorCode='#DADADA' />
-        <p>Длительность 2 минуты</p>
+        <p>Длительность 2 минуты </p>
+        <p>{routes.front.root} </p>
       </div>
       
     <YouTube
