@@ -251,7 +251,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         id='advcakeAsync'
         src='/assets/js/vendors/advCake.js'
       /> */}
-      {/* {prod && ( */}
+      {prod && (
         <>
           <Script
             id='roistat counter'
@@ -269,7 +269,7 @@ const MyApp = ({ Component, pageProps, router }) => {
 
           {/* <Script async src='/assets/js/vendors/roistatWA.js' /> */}
         </>
-      {/* )} */}
+      )}
 {/* 
       <Script
         id='edpartners_scaletrk'
