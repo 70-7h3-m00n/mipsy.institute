@@ -16,7 +16,7 @@ type TRoutes = {
 
 const routes = {
   front: {
-    root: dev ? 'http://localhost:3000' : 'https://mipsy.institute',
+    root: dev ? 'http://localhost:3000' : 'https://www.mipsy.institute',
     home: '/',
     programs: '/programs',
     professions: '/professions',
