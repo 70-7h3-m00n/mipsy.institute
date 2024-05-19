@@ -109,13 +109,13 @@ const FormAlpha = ({
         data.advcake_track_id = advcake_track_id
         data.advcake_track_url = advcake_track_url
         data.roistat_visit = roistat_visit
-        const req = await genezis(data)
+        // const req = await genezis(data)
         // const req = await hitContactRoute(data)
 
         // if (req === 200) {
           setLoading(false)
           // window.open(routes.front.gratefull, '_blank')
-          setIsIpCheckFailed(false)
+          // setIsIpCheckFailed(false)
           // setIsDisabled(true)
           setThanksIsOpen(true)
         // } else {
