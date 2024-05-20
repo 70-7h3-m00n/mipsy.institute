@@ -45,7 +45,7 @@
 .points
   position: relative
   z-index: 2
-  flex-basis: 50%
+  flex-basis: 60%
   @include m.gap($mb: f.px(0), $mt: f.px(29))
   @include m.media(phone, tablet)
     @include m.gap($mt: f.px(0))
@@ -55,7 +55,7 @@
   @include m.media(phone, tablet)
     display: none
   position: relative
-  flex-basis: 50%
+  flex-basis: 40%
 
 .wrapItem
   position: relative
@@ -68,12 +68,11 @@
     height: auto
     min-height: f.px(103)
     max-height: fit-content
-    @include m.gap($mb: f.px(10),$mlr: f.px(15), $pl: f.px(41))
+    @include m.gap($mb: f.px(10),$mlr: f.px(15), $pl: f.px(21))
+  @include m.media(laptop)
+    @include m.gap($mb: f.px(8), $mlr: f.px(3), $pl: f.px(21))
   &:nth-of-type(2)
     @include m.gap($mt: f.px(0))
-  &:nth-of-type(4)
-    & > *
-      max-width: f.px(300)
   &:nth-of-type(5)
     margin-bottom: f.px(31)
 
@@ -84,8 +83,9 @@
   @include m.gap($pt: f.px(37), $pb: f.px(9), $mb: f.px(0))
   @include m.media(laptop)
     @include m.gap($pt: f.px(17))
+    font-size: f.px(24)
   @include m.media(phone, tablet)
-    font-size: f.px(20)
+    font-size: f.px(16)
     @include m.gap($pt: f.px(20), $pb: f.px(5))
 
 .decs

@@ -8,9 +8,8 @@ const ThirdSlide = () => {
   return (
     <div className={stls.container}>
       
-      <p className={stls.first}><span className={stls.bold}>МИП</span> — это команда практикующих экспертов, отзывчивых кураторов и наставников, которые будут сопровождать вас от начала до конца и обеспечат старт вашей успешной карьеры.</p>
+      <p className={stls.first}><span className={stls.bold}>Выбирайте программу</span> обучения и получайте теоретические знания и практические навыки, которые помогли уже многим людям изменить свою жизнь! Ждем вас с нетерпением в числе наших студентов!</p>
       <div className={stls.filterImg}>
-
       
       <span className={stls.filter}></span>
         <Image
