@@ -2,10 +2,6 @@ import TagOrange from '@/components/general/TagOrange'
 import TagWhite from '@/components/general/TagWhite'
 import stls from '@/styles/components/sections/AboutSlider/FirstSlide.module.sass'
 
-type AboutType = {
-  standalone?: boolean
-}
-
 const FirstSlide = () => {
   return (
     <div className={stls.container}>
@@ -16,8 +12,8 @@ const FirstSlide = () => {
         <TagOrange>МИП</TagOrange>
       </div>
       <h2 className={stls.title}>Об институте</h2>
-      <p className={stls.first}>Мы за современный подход в образовании.</p>
-      <p className={stls.second}>Онлайн-институт психологии занимается профессиональной переподготовкой по самым востребованным психологическим направлениям. Мы собрали команду из ведущих преподавателей-практиков и разработали программы обучения, отвечающие международным стандартам в сфере образования.</p>
+      <p className={stls.first}><strong style={{"fontWeight": 500}}>Мы – за удобство и практичность!</strong> Поэтому обучение проходит в удобной дистанционной форме с применением современных технологий.</p>
+      <p className={stls.second}><strong style={{"fontWeight": 500}}>Мы – за качество! </strong>Поэтому большинство наших преподавателей имеют серьезный опыт научной и практической деятельности в области психологии и способны поделиться со студентами самыми актуальными знаниями.</p>
     </div>
   )
 }
