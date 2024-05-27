@@ -51,8 +51,8 @@ const JournalSlugPage = ({ blog }) => {
 
   return (
     <Wrapper>
-      <SeoPagesJournal blog={blog} />
-      <div className={stls.in}>
+      {/* <SeoPagesJournal blog={blog} /> */}
+      {/* <div className={stls.in}>
         <ReadingProgressbar />
         <Breadcrumbs isJournal breadcrumbs={breadcrumbs} />
         {articleHeading && <ArticleTitle props={articleHeading} />}
@@ -69,7 +69,7 @@ const JournalSlugPage = ({ blog }) => {
           )}
           <ButtonToTop />
         </article>
-      </div>
+      </div> */}
     </Wrapper>
   )
 }
