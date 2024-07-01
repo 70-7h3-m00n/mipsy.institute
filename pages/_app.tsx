@@ -270,80 +270,36 @@ const MyApp = ({ Component, pageProps, router }) => {
           {/* <Script async src='/assets/js/vendors/roistatWA.js' /> */}
         </>
       )}
-{/* 
+
       <Script
-        id='edpartners_scaletrk'
+        id='metrika'
         dangerouslySetInnerHTML={{
           __html: `
-        function sclClickPixelFn() {
-          const url = new URL(document.location.href).searchParams;
-          if (url.get('a')) {
-              const availableParams = ['aff_click_id', 'sub_id1', 'sub_id2', 'sub_id3', 'sub_id4', 'sub_id5', 'aff_param1', 'aff_param2', 'aff_param3', 'aff_param4', 'aff_param5', 'idfa', 'gaid'];
-              const t = new URL('https://edpartners.scaletrk.com/click');
-              const r = t.searchParams;
-              console.log(url);
-              r.append('a', url.get('a'));
-              r.append('o', url.get('o'));
-              r.append('return', 'click_id');
-              if (availableParams?.length > 0) {
-                  availableParams.forEach((key) => {
-                      const value = url.get(key);
-                      if (value) {
-                          r.append(key, value);
-                      }
-                  });
-              }
-              fetch(t.href).then((e) => e.json()).then((e) => {
-                  const c = e.click_id;
-                  if (c) {
-                      const expiration = 864e5 * 90;
-                      const o = new Date(Date.now() + expiration);
-                      document.cookie = 'cl_uid=' + c + ';expires=' + o;
-                      document.cookie = 'utm_source=' + url.get('utm_source') + ';expires=' + o;
-                  }
-              });
-          }
-      }
-      sclClickPixelFn();
-          `
-        }}
-      />
-      <Script
-        id='vk script'
-        dangerouslySetInnerHTML={{
-          __html: `var _tmr = window._tmr || (window._tmr = []);
-        _tmr.push({id: "3477294", type: "pageView", start: (new Date()).getTime()});
-        (function (d, w, id) {
-          if (d.getElementById(id)) return;
-          var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-          ts.src = "https://top-fwz1.mail.ru/js/code.js";
-          var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-          if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-        })(document, window, "tmr-code");`
-        }}
-      />
-      <Script
-        id='WA AMO script'
-        src='https://cdn.gnzs.ru/blablachat/scripts/roistat-whatsapp.js'
-      />
-      <Script
-        id='WA AMO second script'
-        dangerouslySetInnerHTML={{
-          __html: `window.addEventListener('DOMContentLoaded', function () {
-            new GnzsRoiStatClass().init()
-          })`
-        }}
-      />
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(97560795, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  `
+        }}
+      />
       <noscript>
         <div>
           <img
-            src='https://top-fwz1.mail.ru/counter?id=3477294;js=na'
+            src='https://mc.yandex.ru/watch/97560795'
             style={{ position: 'absolute', left: '-9999px' }}
-            alt='Top.Mail.Ru'
+            alt=''
           />
         </div>
-      </noscript>  */}
+      </noscript>
+
       <Script
         id='GTM first script'
         src='https://www.googletagmanager.com/gtag/js?id=G-PVE1C7ZRLM'
