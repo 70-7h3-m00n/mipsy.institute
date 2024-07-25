@@ -5,10 +5,10 @@ import ProgramCost from '@/components/program/ProgramCost'
 import { ContextStaticProps } from '@/context/index'
 import { useContext } from 'react'
 import { IconCircleCheck } from '@/components/icons'
-import ProgramAdmission from '@/components/program/ProgramAdmission'
 import ProgramStudyDuration from '@/components/program/ProgramStudyDuration'
 import MoneySaving from '../program/MoneySaving'
 import { FormAlpha } from '../forms'
+import getNextWednesday from '@/helpers/getNextThursday'
 
 const StudyCost = ({costRef}) => {
   const { program } = useContext(ContextStaticProps)
@@ -20,7 +20,7 @@ const StudyCost = ({costRef}) => {
   const studyMounthsDuration = program?.studyMounthsDuration || 0
 
   const info = [
-    { key: 'Зачисление:', val: <ProgramAdmission /> },
+    { key: 'Зачисление:', val: getNextWednesday(new Date()) },
     {
       key: 'Форма обучения:',
       val: studyForm === 'Online' ? 'Дистанционно' : studyFormLabel
