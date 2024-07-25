@@ -1,9 +1,9 @@
-import ProgramAdmission from '@/components/program/ProgramAdmission'
+import getNextFriday from '@/helpers/getNextFriday'
 
 const ProgramDiscountUntil = () => {
   return (
     <>
-      до <ProgramAdmission />
+      до {getNextFriday(new Date())}
     </>
   )
 }
