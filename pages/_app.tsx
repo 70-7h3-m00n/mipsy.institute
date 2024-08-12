@@ -315,6 +315,42 @@ const MyApp = ({ Component, pageProps, router }) => {
           gtag('config', 'AW-11307234082');`
         }}
       />
+      <Script
+        id='GTM second script'
+        dangerouslySetInnerHTML={{
+          __html: ` function gtagSendEvent(url) {
+            var callback = function () {
+              if (typeof url === 'string') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion_event_contact', {
+              'event_callback': callback,
+              'event_timeout': 2000,
+              // <event_parameters>
+            });
+            return false;
+          }`
+        }}
+      />
+      <Script
+        id='GTM second script'
+        dangerouslySetInnerHTML={{
+          __html: `function gtagSendEvent(url) {
+            var callback = function () {
+              if (typeof url === 'string') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion_event_submit_lead_form', {
+              'event_callback': callback,
+              'event_timeout': 2000,
+              // <event_parameters>
+            });
+            return false;
+          }`
+        }}
+      />
     </>
   )
 }
