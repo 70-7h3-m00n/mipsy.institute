@@ -30,6 +30,7 @@ import listOnKonsultant from '@/data/general/listOnKonsultant'
 import listOnKTP from '@/data/general/listOnKTP'
 import listOnMediator from '@/data/general/listOnMediator'
 import listOnPsychoSomatic from '@/data/general/listOnPsychoSomatic'
+import EntryForm from '../sections/EntryForm'
 
 interface Breadcrumb {
   label: string;
@@ -122,6 +123,8 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
 
   const isDesktopLayout = useBetterMediaQuery('(min-width: 769px)')
 
+  const isMobileAndTabletLayout = useBetterMediaQuery('(max-width: 768px)')
+
   return (
     <>
     <ButtonToTop />
@@ -163,7 +166,7 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
         )}`}
         cta='reserve'
       />
-      <StudyCost costRef={costRef} />
+      <EntryForm pt={isMobileAndTabletLayout ? 0 : 90} pb={ isMobileAndTabletLayout ? 60 : 0}/>
       <Reviews reviewsRef={reviewsRef} reviews={reviewsSorted} />
       <Faq faqRef={faqRef}/>
       
