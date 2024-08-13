@@ -14,7 +14,7 @@ const PageNavigation = ({ofType = null,processRef, planRef, teachersRef, costRef
     plan: planRef,
     teachers: teachersRef,
     resume: resumeRef,
-    cost: costRef,
+    // cost: costRef,
     reviews: reviewsRef,
     faq: faqRef,
   }
@@ -87,13 +87,13 @@ const PageNavigation = ({ofType = null,processRef, planRef, teachersRef, costRef
             </li>
             )}
             
-            <li>
+            {/* <li>
               <p
                 className={activeSection === 'cost' ? stls.active : ''}
                 onClick={() => handleScrollToSection('cost')}>
                 Стоимость
               </p>
-            </li>
+            </li> */}
             <li>
               <p
                 className={activeSection === 'reviews' ? stls.active : ''}
@@ -145,13 +145,13 @@ const PageNavigation = ({ofType = null,processRef, planRef, teachersRef, costRef
             </li>
             )}
             
-            <li>
+            {/* <li>
               <p
                 className={activeSection === 'cost' ? stls.active : ''}
                 onClick={() => handleScrollToSection('cost')}>
                 Стоимость
               </p>
-            </li>
+            </li> */}
             <li>
               <p
                 className={activeSection === 'reviews' ? stls.active : ''}

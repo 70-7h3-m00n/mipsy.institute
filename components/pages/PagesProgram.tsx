@@ -30,6 +30,7 @@ import listOnKonsultant from '@/data/general/listOnKonsultant'
 import listOnKTP from '@/data/general/listOnKTP'
 import listOnMediator from '@/data/general/listOnMediator'
 import listOnPsychoSomatic from '@/data/general/listOnPsychoSomatic'
+import EntryForm from '../sections/EntryForm'
 
 interface Breadcrumb {
   label: string;
@@ -163,7 +164,7 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
         )}`}
         cta='reserve'
       />
-      <StudyCost costRef={costRef} />
+      <EntryForm />
       <Reviews reviewsRef={reviewsRef} reviews={reviewsSorted} />
       <Faq faqRef={faqRef}/>
       
