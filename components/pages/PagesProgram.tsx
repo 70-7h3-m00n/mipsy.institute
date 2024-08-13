@@ -123,6 +123,8 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
 
   const isDesktopLayout = useBetterMediaQuery('(min-width: 769px)')
 
+  const isMobileAndTabletLayout = useBetterMediaQuery('(max-width: 768px)')
+
   return (
     <>
     <ButtonToTop />
@@ -164,7 +166,7 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
         )}`}
         cta='reserve'
       />
-      <EntryForm />
+      <EntryForm pt={isMobileAndTabletLayout ? 0 : 90} pb={ isMobileAndTabletLayout ? 60 : 0}/>
       <Reviews reviewsRef={reviewsRef} reviews={reviewsSorted} />
       <Faq faqRef={faqRef}/>
       
