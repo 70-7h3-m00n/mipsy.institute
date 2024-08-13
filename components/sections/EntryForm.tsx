@@ -6,7 +6,7 @@ import Horn from '@/components/imgs/general/Horn'
 import ImgEntryForm from '@/components/imgs/general/ImgEntryForm'
 import TwoColumns from '@/components/layout/TwoColumns'
 
-const EntryForm = (pt=0, pb=90) => {
+const EntryForm = ({pt=0, pb=90}) => {
   return (
     <section style={{paddingTop: pt, paddingBottom: pb}} className={stls.container}>
       <Wrapper>
