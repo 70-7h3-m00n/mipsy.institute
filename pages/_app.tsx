@@ -312,7 +312,7 @@ const MyApp = ({ Component, pageProps, router }) => {
           gtag('js', new Date());
         
           gtag('config', 'G-PVE1C7ZRLM');
-          gtag('config', 'AW-11307234082');`
+          gtag('config', 'AW-822792302');`
         }}
       />
       <Script

@@ -39,7 +39,7 @@ const PopupThankyou = ({ close }) => {
       id='GoogelConversion'
       dangerouslySetInnerHTML={{
         
-          __html: `gtag('event', 'conversion', {'send_to': 'AW-11307234082/GWRICObunqUZEKLm2o8q'})`
+          __html: `gtag('event', 'conversion', {'send_to': 'AW-822792302/ktI6CJG-0toZEO6gq4gD'})`
         }}/>
       <div className={stls.close}>
         <BtnClose onClick={close} iconCloseCircle />
