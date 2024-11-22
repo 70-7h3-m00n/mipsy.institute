@@ -148,9 +148,9 @@ const Footer = () => {
                 <Logo atFooter/>
               </li>
             </ul>
-            {/* {!isEdpartners ? (
+            {/* {!isEdpartners ? ( */}
               <div className={stls.contact}>
-                <p>Приемная комиссия:</p>
+                {/* <p>Приемная комиссия:</p>
                 <div className={stls.numbers}>
                   <a
                     href={company.phoneNumbers.default.href}
@@ -168,14 +168,17 @@ const Footer = () => {
                     className={stls.number}>
                     {company.phoneNumbers.studyDivision.val}
                   </a>
-                </div>
+                </div> */}
+                <div className={stls.leaveApp}>
+                <PopupTrigger btn='alpha' cta='submitApplication' />
+              </div>
                 <div className={stls.email}>
                   <p>Электронный адрес:</p>
-                  <p className={stls.eadress}>info@mip.institute</p>
+                  <p className={stls.eadress}>almaty@mip.institute</p>
                 </div>
-                <GeneralAddress classNames={[stls.address]} />
+                {/* <GeneralAddress classNames={[stls.address]} /> */}
 
-                <div className={stls.sm}>
+                {/* <div className={stls.sm}>
                   <BtnVk dark mlzero />
                   <BtnWhatsapp dark />
                   <BtnTelegram dark />
@@ -187,14 +190,14 @@ const Footer = () => {
 
                 <div className={stls.btn}>
                   <PopupTrigger btn='beta' cta='askQuestion' />
-                </div>
+                </div> */}
               </div>
-            ) : (
-              <PopupFooterReviews />
-            )} */}
-            <div className={stls.leaveApp}>
+            {/* // ) : (
+            //   <PopupFooterReviews />
+            // )} */}
+            {/* <div className={stls.leaveApp}>
                 <PopupTrigger btn='alpha' cta='submitApplication' />
-              </div>
+              </div> */}
             <div className={stls.newRight}>
               {/* <div className={stls.leaveApp}>
                 <PopupTrigger btn='alpha' cta='submitApplication' />

@@ -11,7 +11,7 @@
   //   justify-content: space-between
   //   width: 100%
 .left
-  @include m.gap($pt: f.px(50))
+  @include m.gap($pt: f.px(50), $pb: f.px(90))
   @include m.media(laptop, desktop)
     @include m.flex($display: false)
     // @include m.gap($pr: f.px(113))
@@ -151,7 +151,7 @@
   @include m.gap($mtb: f.px(15))
   font-size: f.px(18)
   @include m.media(phone, tablet)
-    display: none
+    // display: none
   p
     @include m.gap($mb: f.px(10))
   .eadress
