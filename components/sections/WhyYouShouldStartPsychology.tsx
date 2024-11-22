@@ -55,7 +55,7 @@ const WhyYouShouldStartPsychology = ({toggleOverview,showDescription,programOver
             <PsyPic />
             <div className={stls.vacancies}>
               
-              <p>8000 вакансий психологов <br /> на HH.RU</p>
+              <p>8000 вакансий психологов <br /> на HH</p>
               <div className={stls.headHunter}>
                 <HeadHunter />
               </div>

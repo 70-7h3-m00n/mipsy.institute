@@ -71,7 +71,7 @@ const WhyYouShouldStartPsychologyDesktop = ({
             </div>
             
             <div className={stls.bbcText}>
-              <p><strong>8000 вакансий</strong> психологов на HH.RU</p>
+              <p><strong>8000 вакансий</strong> психологов на HH</p>
             </div>
           </div>
           <div className={stls.bbc}>

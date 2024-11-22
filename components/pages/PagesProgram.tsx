@@ -144,13 +144,13 @@ const PagesProgram = ({ ofType = null, reviews, programOverview, breadcrumbs, sl
 
       {checkSlug.includes(slug) ? (
         <>
-      <WhatYouWillLearn title={'Чему вы научитесь'}  />
+      <WhatYouWillLearn title={'Чему мы обучаем'}  />
       <ForWhom />
         </>
       ) : (
         <>
         <ForWhom />
-      <WhatYouWillLearn title={'Чему вы научитесь'}  />
+      <WhatYouWillLearn title={'Чему мы обучаем'}  />
       </>
       )}
       <HowProcessGoes processRef={processRef} list={ofType === 'course'? listOnCourses : list} subtitle={subtitle} />
