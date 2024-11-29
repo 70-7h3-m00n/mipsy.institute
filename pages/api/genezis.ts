@@ -20,6 +20,7 @@ const createLead = async (req, res) => {
 
   // URL для запроса сделки по ID
   const apiUrl = `https://webhook.gnzs.ru/ext/site-int/amo/29931190?gnzs_token=4f9cbc7c-e70f-45d7-af22-4c324597caf9`
+                //https://webhook.gnzs.ru/ext/site-int/amo/29931190?gnzs_token=4f9cbc7c-e70f-45d7-af22-4c324597caf9
   try {
     const leadsData = {
       form: [
