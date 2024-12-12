@@ -61,8 +61,6 @@ const PopupThankyou = ({ close }) => {
           __html: `ttq.track('CompletePayment')`
         }}/>
 
-
-
       <div className={stls.close}>
         <BtnClose onClick={close} iconCloseCircle />
       </div>
