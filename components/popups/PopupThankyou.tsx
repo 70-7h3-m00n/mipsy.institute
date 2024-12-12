@@ -53,6 +53,16 @@ const PopupThankyou = ({ close }) => {
         
           __html: `fbq('track', 'SubmitApplication');`
         }}/>
+
+<Script
+      id='facebook'
+      dangerouslySetInnerHTML={{
+        
+          __html: `ttq.track('CompletePayment')`
+        }}/>
+
+
+
       <div className={stls.close}>
         <BtnClose onClick={close} iconCloseCircle />
       </div>
