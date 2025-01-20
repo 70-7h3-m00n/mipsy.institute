@@ -35,34 +35,6 @@ const PopupThankyou = ({ close }) => {
   // }, [])
   return (
     <div className={stls.container}>
-      <Script
-      id='GoogelConversion'
-      dangerouslySetInnerHTML={{
-        
-          __html: `gtag('event', 'conversion', {'send_to': 'AW-822792302/ktI6CJG-0toZEO6gq4gD'})`
-        }}/>
-        <Script
-      id='tiktok'
-      dangerouslySetInnerHTML={{
-        
-          __html: `ttq.track('CompleteRegistration')`
-        }}/>
-        <Script
-      id='facebook'
-      dangerouslySetInnerHTML={{
-        
-          __html: `fbq('track', 'SubmitApplication');`
-        }}/>
-
-<Script
-      id='facebook'
-      dangerouslySetInnerHTML={{
-        
-          __html: `ttq.track('CompletePayment')`
-        }}/>
-
-
-
       <div className={stls.close}>
         <BtnClose onClick={close} iconCloseCircle />
       </div>

@@ -5,6 +5,8 @@ import truncate from 'truncate'
 import { routes, company } from '@/config/index'
 import { SeoOrganizationJsonLd } from '@/components/seo'
 import Gratefull from '@/components/sections/Gratefull'
+import { useRouter } from 'next/router'
+import { AnalyticsScripts } from './scripts'
 
 const GratefullPage: NextPage<TypePageDefaultProps> = () => {
   // useHandleContextStaticProps({ programs })
@@ -17,8 +19,18 @@ const GratefullPage: NextPage<TypePageDefaultProps> = () => {
     ),
     canonical: `${routes.front.root}${routes.front.gratefull}`
   }
+  const router = useRouter()
+  const prevPath = router.query.prevPath
+
+  const isPsyCons = '/professions/konsultirovanie/psiholog-konsultant'
+
+  const isPsySomatic =
+    '/professions/psihoterapiya/psihosomatika-i-telesnaya-psihoterapiya'
+  const isShowTikTokAnalytics =
+    prevPath === isPsyCons || prevPath === isPsySomatic
   return (
     <>
+      <AnalyticsScripts isShowTikTokAnalytics={isShowTikTokAnalytics} />
       <NextSeo
         title={seoParams.title}
         description={seoParams.desc}
@@ -38,13 +50,10 @@ const GratefullPage: NextPage<TypePageDefaultProps> = () => {
               type: 'image/png'
             }
           ],
-          site_name: company.name,
-          
-          
+          site_name: company.name
         }}
       />
       <SeoOrganizationJsonLd />
-      
       <Gratefull />
     </>
   )
