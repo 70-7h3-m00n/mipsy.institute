@@ -201,9 +201,6 @@ const MyApp = ({ Component, pageProps, router }) => {
     '/professions/psihoterapiya/psihosomatika-i-telesnaya-psihoterapiya'
   const isShowTikTokAnalytics =
     router.asPath === isPsyCons || router.asPath === isPsySomatic
-
-  console.log(isShowTikTokAnalytics)
-
   return (
     <>
       <DefaultSeo {...SEO} />
@@ -313,59 +310,62 @@ const MyApp = ({ Component, pageProps, router }) => {
       </noscript>
 
       <Script
-        id='GTM first script'
-        src='https://www.googletagmanager.com/gtag/js?id=G-PVE1C7ZRLM'
-      />
-      <Script
-        id='GTM second script'
+        id='gtag-initialization'
+        strategy='beforeInteractive'
         dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-PVE1C7ZRLM');
-          gtag('config', 'AW-822792302');`
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PVE1C7ZRLM');
+    gtag('config', 'AW-822792302');`
         }}
       />
+
       <Script
-        id='GTM second script'
-        dangerouslySetInnerHTML={{
-          __html: ` function gtagSendEvent(url) {
-            var callback = function () {
-              if (typeof url === 'string') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion_event_contact', {
-              'event_callback': callback,
-              'event_timeout': 2000,
-              // <event_parameters>
-            });
-            return false;
-          }`
-        }}
-      />
-      <Script
-        id='GTM second script'
+        id='gtag-send-conversion-contact'
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html: `function gtagSendEvent(url) {
-            var callback = function () {
-              if (typeof url === 'string') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion_event_submit_lead_form', {
-              'event_callback': callback,
-              'event_timeout': 2000,
-              // <event_parameters>
-            });
-            return false;
-          }`
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_contact', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+        // <event_parameters>
+      });
+      return false;
+    }`
         }}
       />
+
+      <Script
+        id='gtag-send-conversion-submit-lead-form'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_submit_lead_form', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+        // <event_parameters>
+      });
+      return false;
+    }`
+        }}
+      />
+
       {isShowTikTokAnalytics && (
         <Script
           id='TiktokAnalytics'
+          strategy='afterInteractive'
           dangerouslySetInnerHTML={{
             __html: `!function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -381,6 +381,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       )}
       <Script
         id='pixelAnalytic'
+        strategy='beforeInteractive'
         dangerouslySetInnerHTML={{
           __html: `
     !function(f,b,e,v,n,t,s)
@@ -400,7 +401,7 @@ fbq('track', 'PageView');
         <img
           height='1'
           width='1'
-          style={{display:'none'}}
+          style={{ display: 'none' }}
           src='https://www.facebook.com/tr?id=932137408247744&ev=PageView&noscript=1'
         />
       </noscript>
