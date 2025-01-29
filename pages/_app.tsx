@@ -362,7 +362,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         }}
       />
 
-      {isShowTikTokAnalytics && (
+      {/* {isShowTikTokAnalytics && ( */}
         <Script
           id='TiktokAnalytics'
           strategy='afterInteractive'
@@ -378,7 +378,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 }(window, document, 'ttq');`
           }}
         />
-      )}
+      {/* )} */}
       <Script
         id='pixelAnalytic'
         strategy='beforeInteractive'

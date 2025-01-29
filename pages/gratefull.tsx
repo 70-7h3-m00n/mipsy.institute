@@ -39,7 +39,7 @@ const GratefullPage: NextPage<TypePageDefaultProps> = () => {
         }}
       />
 
-      {isShowTikTokAnalytics && (
+      {/* {isShowTikTokAnalytics && ( */}
         <>
           {/* <AnalyticsScripts isShowTikTokAnalytics={isShowTikTokAnalytics} /> */}
           <Script
@@ -73,7 +73,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             }}
           />
         </>
-      )}
+      {/* )} */}
 
       {/* Facebook SubmitApplication Event */}
       <Script
